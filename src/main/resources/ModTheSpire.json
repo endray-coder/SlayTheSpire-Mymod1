@@ -1,0 +1,10 @@
+{
+  "modid": "mymod1",
+  "name": "test01",
+  "author_list": ["endray"],
+  "description": "作为教程的mod。",
+  "version": "0.0.1",
+  "sts_version": "12-20-2022",
+  "mts_version": "3.23.2",
+  "dependencies": ["basemod"]
+}

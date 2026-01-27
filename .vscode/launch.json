@@ -1,0 +1,25 @@
+
+{
+  "version": "0.2.0",
+  "configurations": [
+
+    {
+      "type": "java",
+      "name": "Launch Java Program",
+      "request": "launch",
+      "mainClass": "com.megacrit.cardcrawl.desktop.DesktopLauncher",
+    // ModTheSpire的命令行配置，参考https://github.com/kiooeht/ModTheSpire/wiki/Command-Line-Arguments
+    //   "args": ["--mods", "basemod"],
+    // 杀戮尖塔根目录
+      "cwd": "E:/Program Files (x86)/Steam/steamapps/common/SlayTheSpire",
+    // Java8的路径
+      "javaExec": "C:/Program Files/Eclipse Adoptium/jdk-8.0.472.8-hotspot/jre/bin/java.exe",
+      "preLaunchTask": "maven-package",
+    // Steam的路径
+      "classPaths": [
+        "E:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\646570\\1605060445\\ModTheSpire.jar"
+      ]
+    }
+  ]
+}
+
