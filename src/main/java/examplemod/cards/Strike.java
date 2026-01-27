@@ -45,6 +45,7 @@ public class Strike extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(
                         m,
@@ -54,7 +55,22 @@ public class Strike extends CustomCard {
                                 DamageInfo.DamageType.NORMAL
                         )
                 )
+
         );
+        for (int i = 0; i < 2; i++) {
+            AbstractDungeon.actionManager.addToBottom(
+                    new DamageAction(
+                            m,
+                            new DamageInfo(
+                                    p,
+                                    damage,
+                                    DamageInfo.DamageType.NORMAL
+                            )
+                    )
+
+            );
+        }
+
     }
 
 
