@@ -19,7 +19,10 @@ public class Strike extends CustomCard {
     private static final CardColor COLOR = CardColor.COLORLESS;
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.ENEMY;
-
+    // 1. 这张卡的累计成长伤害（每张卡独立拥有，初始为0）
+    private int cardExclusiveGrowth = 0;
+    // 2. 每次使用后，这张卡的永久成长值（可自定义，这里设为1）
+    private final int PER_USE_GROWTH = 1;
     public Strike() {
         // 为了命名规范修改了变量名。这些参数具体的作用见下方
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
@@ -45,34 +48,30 @@ public class Strike extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        int atktime = 3;
+        // 备份当前基础伤害（用于循环结束后，只保留1点战斗内成长）
+        int backupBaseDamage = this.baseDamage;
 
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(
-                        m,
-                        new DamageInfo(
-                                p,
-                                damage,
-                                DamageInfo.DamageType.NORMAL
-                        )
-                )
-
-        );
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < atktime; i++) {
+            // 步骤1：让框架基于当前 baseDamage 计算最终伤害（含愤怒倍率）
+            this.applyPowers();
+            // 步骤2：结算伤害（用框架计算好的 damage，这是带倍率的最终值）
             AbstractDungeon.actionManager.addToBottom(
                     new DamageAction(
                             m,
-                            new DamageInfo(
-                                    p,
-                                    damage,
-                                    DamageInfo.DamageType.NORMAL
-                            )
+                            new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL)
                     )
-
             );
+            // 步骤3：递增「基础伤害」1点（这是关键，让下一次循环有新的底牌）
+            this.baseDamage += 1;
+            // 步骤4：同步 damage，让框架下一次计算倍率时识别新的 baseDamage
+            this.damage = this.baseDamage;
         }
 
+        // 步骤5：循环结束后，只保留1点战斗内成长（符合你的需求）
+        this.baseDamage = backupBaseDamage + 1;
+        this.damage = this.baseDamage;
     }
-
 
 
 
