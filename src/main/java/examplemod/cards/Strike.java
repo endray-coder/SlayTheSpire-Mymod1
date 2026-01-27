@@ -65,6 +65,7 @@ public class Strike extends CustomCard {
             // 步骤3：递增「基础伤害」1点（这是关键，让下一次循环有新的底牌）
             this.baseDamage += 1;
             // 步骤4：同步 damage，让框架下一次计算倍率时识别新的 baseDamage
+
             this.damage = this.baseDamage;
         }
 
