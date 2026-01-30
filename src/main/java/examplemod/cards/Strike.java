@@ -13,7 +13,7 @@ public class Strike extends CustomCard {
     public static final String ID = "mymod1:Strike";
     private static final String NAME = "超绝故障机器人杀鸡乱斩";
     private static final String IMG_PATH = "img/cards/Strike.png";
-    private static final int COST = 1;
+    private static final int COST = 3;
     private static final String DESCRIPTION = "造成 !D! 点伤害。";
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardColor COLOR = CardColor.COLORLESS;
@@ -23,10 +23,12 @@ public class Strike extends CustomCard {
     private int cardExclusiveGrowth = 0;
     // 2. 每次使用后，这张卡的永久成长值（可自定义，这里设为1）
     private final int PER_USE_GROWTH = 1;
+
+    private int atktime =3;
     public Strike() {
         // 为了命名规范修改了变量名。这些参数具体的作用见下方
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = this.damage =1;
+        this.baseDamage = this.damage =3;
         this.tags.add(CardTags.STARTER_STRIKE);
         this.tags.add(CardTags.STRIKE);
     }
@@ -35,7 +37,8 @@ public class Strike extends CustomCard {
     public void upgrade() { // 升级调用的方法
         if (!this.upgraded) {
             this.upgradeName(); // 卡牌名字变为绿色并添加“+”，且标为升级过的卡牌，之后不能再升级。
-            this.upgradeDamage(3); // 将该卡牌的伤害提高3点。
+           // this.upgradeDamage(3); // 将该卡牌的伤害提高3点。
+            this.atktime =5;
         }
     }
 
@@ -48,7 +51,6 @@ public class Strike extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int atktime = 3;
         // 备份当前基础伤害（用于循环结束后，只保留1点战斗内成长）
         int backupBaseDamage = this.baseDamage;
 
@@ -63,14 +65,14 @@ public class Strike extends CustomCard {
                     )
             );
             // 步骤3：递增「基础伤害」1点（这是关键，让下一次循环有新的底牌）
-            this.baseDamage += 1;
+            this.baseDamage += 6;
             // 步骤4：同步 damage，让框架下一次计算倍率时识别新的 baseDamage
 
             this.damage = this.baseDamage;
         }
-
-        // 步骤5：循环结束后，只保留1点战斗内成长（符合你的需求）
-        this.baseDamage = backupBaseDamage + 1;
+        //当时测试用，本来这张卡是造成伤害成等差数列上升用的，后面想了想干脆搞成超绝猛虎杀鸡乱斩得了
+       // this.baseDamage = backupBaseDamage + 1;
+        this.baseDamage = backupBaseDamage ;
         this.damage = this.baseDamage;
     }
 
