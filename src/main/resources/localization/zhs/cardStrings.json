@@ -1,0 +1,7 @@
+{
+  "mymod1:Strike": {
+    "NAME": "快机乱麻",
+    "DESCRIPTION": "造成 !D! 点伤害3次。每次增加6点",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害5次。每次增加6点"
+  }
+}
