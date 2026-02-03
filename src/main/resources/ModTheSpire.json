@@ -1,8 +1,8 @@
 {
   "modid": "mymod1",
-  "name": "test01",
+  "name": "超绝猛机杀击乱斩",
   "author_list": ["endray"],
-  "description": "作为教程的mod。",
+  "description": "作为测试的mod。",
   "version": "0.0.1",
   "sts_version": "12-20-2022",
   "mts_version": "3.23.2",

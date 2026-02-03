@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.relics.Vajra;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import examplemod.cards.QuickStrike;
 import examplemod.cards.Strike;
 import examplemod.modcore.mymod1;
 import java.util.ArrayList;
@@ -87,7 +88,7 @@ public class MyCharacter extends CustomPlayer {
             retVal.add(Strike.ID);
             retVal.add("mymod1:Defend");
         }
-        //retVal.add("mymod1:Strike");
+        retVal.add("mymod1:QuickStrike");
         return retVal;
     }
 
@@ -130,7 +131,7 @@ public class MyCharacter extends CustomPlayer {
     // 翻牌事件出现的你的职业牌（一般设为打击）
     @Override
     public AbstractCard getStartCardForEvent() {
-        return new Strike();
+        return new QuickStrike();
     }
 
     // 卡牌轨迹颜色

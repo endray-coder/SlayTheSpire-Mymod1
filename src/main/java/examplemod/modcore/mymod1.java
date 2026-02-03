@@ -4,11 +4,11 @@ import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.EditCharactersSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import examplemod.cards.Defend;
+import examplemod.cards.QuickStrike;
 import examplemod.cards.Strike;
 import examplemod.character.MyCharacter;
 import com.badlogic.gdx.graphics.Color;
@@ -46,10 +46,13 @@ public class mymod1 implements EditCardsSubscriber, EditCharactersSubscriber, Ed
 
     @Override
     public void receiveEditCards() {
-        BaseMod.addCard(new Strike());
-        UnlockTracker.markCardAsSeen(Strike.ID);
+        BaseMod.addCard(new QuickStrike());
+        UnlockTracker.markCardAsSeen(QuickStrike.ID);
         BaseMod.addCard(new Defend());
         UnlockTracker.markCardAsSeen(Defend.ID);
+        BaseMod.addCard(new Strike());
+        UnlockTracker.markCardAsSeen(Strike.ID);
+
     }
 
     @Override
