@@ -16,11 +16,11 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
-import com.megacrit.cardcrawl.relics.Vajra;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import examplemod.cards.QuickStrike;
 import examplemod.cards.Strike;
-import examplemod.modcore.mymod1;
+import examplemod.modcore.mymod;
+
 import java.util.ArrayList;
 
 // 继承CustomPlayer类
@@ -49,7 +49,7 @@ public class MyCharacter extends CustomPlayer {
     private static final float[] LAYER_SPEED = new float[]{-40.0F, -32.0F, 20.0F, -20.0F, 0.0F, -10.0F, -8.0F, 5.0F, -5.0F, 0.0F};
     // 人物的本地化文本，如卡牌的本地化文本一样，如何书写见下
 
-    private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString("mymod1:MyCharacter");
+    private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString("mymod:MyCharacter");
 
     public MyCharacter(String name) {
         super(name, PlayerColorEnum.MY_CHARACTER,ORB_TEXTURES,"img/UI/orb/vfx.png", LAYER_SPEED, null, null);
@@ -84,18 +84,21 @@ public class MyCharacter extends CustomPlayer {
     // 初始卡组的ID，可直接写或引用变量
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-        for(int x = 0; x<5; x++) {
+        for(int x = 0; x<4; x++) {
             retVal.add(Strike.ID);
-            retVal.add("mymod1:Defend");
+            retVal.add("mymod:Defend");
         }
-        retVal.add("mymod1:QuickStrike");
+        retVal.add("mymod:QuickStrike");
+        retVal.add("mymod:shoot1");
+        retVal.add("mymod:Reloading1");
         return retVal;
     }
 
     // 初始遗物的ID，可以先写个原版遗物凑数
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add(Vajra.ID);
+      //  retVal.add(Vajra.ID);
+        retVal.add("mymod:diejia");
         return retVal;
     }
 
@@ -137,7 +140,7 @@ public class MyCharacter extends CustomPlayer {
     // 卡牌轨迹颜色
     @Override
     public Color getCardTrailColor() {
-        return mymod1.MY_COLOR;
+        return mymod.MY_COLOR;
     }
 
     // 高进阶带来的生命值损失
@@ -196,7 +199,7 @@ public class MyCharacter extends CustomPlayer {
     // 打心脏的颜色，不是很明显
     @Override
     public Color getSlashAttackColor() {
-        return mymod1.MY_COLOR;
+        return mymod.MY_COLOR;
     }
 
     // 吸血鬼事件文本，主要是他（索引为0）和他（索引为1）的区别（机器人另外）
@@ -208,7 +211,7 @@ public class MyCharacter extends CustomPlayer {
     // 卡牌选择界面选择该牌的颜色
     @Override
     public Color getCardRenderColor() {
-        return mymod1.MY_COLOR;
+        return mymod.MY_COLOR;
     }
 
     // 第三章面对心脏造成伤害时的特效

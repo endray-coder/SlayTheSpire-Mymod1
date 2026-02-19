@@ -1,22 +1,23 @@
 package examplemod.modcore;
 import basemod.BaseMod;
-import basemod.interfaces.EditCardsSubscriber;
-import basemod.interfaces.EditCharactersSubscriber;
-import basemod.interfaces.EditStringsSubscriber;
+import basemod.helpers.RelicType;
+import basemod.interfaces.*;
+import com.badlogic.gdx.Gdx;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
-import com.megacrit.cardcrawl.localization.CardStrings;
-import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.google.gson.Gson;
+import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import examplemod.cards.Defend;
-import examplemod.cards.QuickStrike;
-import examplemod.cards.Strike;
+import examplemod.cards.*;
 import examplemod.character.MyCharacter;
 import com.badlogic.gdx.graphics.Color;
+import examplemod.relics.diejia;
+
+import java.nio.charset.StandardCharsets;
 
 import static examplemod.character.MyCharacter.PlayerColorEnum.EXAMPLE_GREEN;
 
 @SpireInitializer
-public class mymod1 implements EditCardsSubscriber, EditCharactersSubscriber, EditStringsSubscriber {
+public class mymod implements EditCardsSubscriber, EditCharactersSubscriber, EditStringsSubscriber, EditRelicsSubscriber , EditKeywordsSubscriber {
     private static final String MY_CHARACTER_BUTTON = "img/char/Character_Button.png";
     private static final String MY_CHARACTER_PORTRAIT = "img/char/Character_Portrait.png";
     private static final String BG_ATTACK_512 = "img/512/bg_attack_512.png";
@@ -31,7 +32,7 @@ public class mymod1 implements EditCardsSubscriber, EditCharactersSubscriber, Ed
 
     public static final Color MY_COLOR = new Color(27.0F / 255.0F, 120.0F / 255.0F, 120.0F / 255.0F, 1.0F);
 
-    public mymod1() {
+    public mymod() {
         BaseMod.addColor(EXAMPLE_GREEN, MY_COLOR, MY_COLOR, MY_COLOR,
                 MY_COLOR, MY_COLOR, MY_COLOR, MY_COLOR, BG_ATTACK_512,
                 BG_SKILL_512, BG_POWER_512, energy_orb, BG_ATTACK_1024,
@@ -41,7 +42,7 @@ public class mymod1 implements EditCardsSubscriber, EditCharactersSubscriber, Ed
     }
 
     public static void initialize() {
-        new mymod1();
+        new mymod();
     }
 
     @Override
@@ -52,6 +53,11 @@ public class mymod1 implements EditCardsSubscriber, EditCharactersSubscriber, Ed
         UnlockTracker.markCardAsSeen(Defend.ID);
         BaseMod.addCard(new Strike());
         UnlockTracker.markCardAsSeen(Strike.ID);
+
+        BaseMod.addCard(new Reloading1());
+        UnlockTracker.markCardAsSeen(Reloading1.ID);
+        BaseMod.addCard(new shoot1());
+        UnlockTracker.markCardAsSeen(shoot1.ID);
 
     }
 
@@ -66,10 +72,36 @@ public class mymod1 implements EditCardsSubscriber, EditCharactersSubscriber, Ed
 
     @Override
     public void receiveEditStrings() {
-
+        String lang = "/zhs/";
         // 加载卡牌本地化文件
-        BaseMod.loadCustomStringsFile(CardStrings.class, "localization/zhs/cardStrings.json");
+        BaseMod.loadCustomStringsFile(CardStrings.class, "localization"+lang+"cardStrings.json");
         // 加载角色本地化文件
-        BaseMod.loadCustomStringsFile(CharacterStrings.class, "localization/zhs/characterStrings.json");
+        BaseMod.loadCustomStringsFile(CharacterStrings.class, "localization"+lang+"characterStrings.json");
+        // 加载遗物本地化文件
+        BaseMod.loadCustomStringsFile(RelicStrings.class, "localization"+lang+"relicStrings.json");
+
+        BaseMod.loadCustomStringsFile(PowerStrings.class, "localization"+lang+"Powers.json");
+    }
+    @Override
+    public void receiveEditRelics() {
+        BaseMod.addRelic(new diejia(), RelicType.SHARED); // RelicType表示是所有角色都能拿到的遗物，还是一个角色的独有遗物
+    }
+    @Override
+    public void receiveEditKeywords() {
+        Gson gson = new Gson();
+        String lang = "zhs";
+
+
+        String json = Gdx.files.internal("localization/" + lang + "/Keywords.json")
+                .readString(String.valueOf(StandardCharsets.UTF_8));
+        Keyword[] keywords = gson.fromJson(json, Keyword[].class);
+        if (keywords != null) {
+            for (Keyword keyword : keywords) {
+                // 这个id要全小写
+                BaseMod.addKeyword("mymod", keyword.NAMES[0], keyword.NAMES, keyword.DESCRIPTION);
+                System.out.println("关键词注册成功：" + keyword.NAMES[0]);
+            }
+        }
+
     }
 }

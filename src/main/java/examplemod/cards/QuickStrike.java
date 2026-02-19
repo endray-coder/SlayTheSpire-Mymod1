@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import examplemod.character.MyCharacter;
 
 public class QuickStrike extends CustomCard {
-    public static final String ID = "mymod1:QuickStrike";
+    public static final String ID = "mymod:QuickStrike";
     private static final String NAME = "快机乱麻";
     private static final String IMG_PATH = "img/cards/Strike.png";
     private static final int COST = 3;

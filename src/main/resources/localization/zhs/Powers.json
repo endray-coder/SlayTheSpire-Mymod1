@@ -1,0 +1,14 @@
+{
+  "mymod:bullet": {
+    "NAME": "虎标弹",
+    "DESCRIPTIONS": [
+      "拥有","虎标弹"
+    ]
+  },
+  "mymod:burn": {
+    "NAME": "燃烧",
+    "DESCRIPTIONS": [
+      "回合结束受到","点伤害"
+    ]
+  }
+}

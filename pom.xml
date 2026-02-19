@@ -7,7 +7,7 @@
     <!-- 改成你需要的名称 -->
     <groupId>endray</groupId>
     <!-- 改成你需要的名称 -->
-    <artifactId>mymod1</artifactId>
+    <artifactId>mymod</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 

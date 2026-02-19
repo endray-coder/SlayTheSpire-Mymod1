@@ -1,5 +1,5 @@
 {
-  "mymod1:MyCharacter": {
+  "mymod:MyCharacter": {
     "NAMES": ["我的角色"],
     "TEXT": [
       "这是一个自定义角色",

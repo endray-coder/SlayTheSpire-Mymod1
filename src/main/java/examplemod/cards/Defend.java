@@ -8,7 +8,7 @@ import examplemod.character.MyCharacter;
 
 // 在examplemod.cards包下创建Defend.java
 public class Defend extends CustomCard {
-    public static final String ID = "mymod1:Defend";
+    public static final String ID = "mymod:Defend";
     private static final String NAME = "铁壁防御";
     private static final String IMG_PATH = "img/cards/Strike.png";
     private static final int COST = 1;
