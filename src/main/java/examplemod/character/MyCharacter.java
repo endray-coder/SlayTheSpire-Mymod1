@@ -99,6 +99,7 @@ public class MyCharacter extends CustomPlayer {
         ArrayList<String> retVal = new ArrayList<>();
       //  retVal.add(Vajra.ID);
         retVal.add("mymod:diejia");
+        retVal.add("mymod:reload_relic");
         return retVal;
     }
 

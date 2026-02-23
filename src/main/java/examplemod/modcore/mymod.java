@@ -13,6 +13,7 @@ import examplemod.cards.*;
 import examplemod.character.MyCharacter;
 import com.badlogic.gdx.graphics.Color;
 import examplemod.relics.diejia;
+import examplemod.relics.reload_relic;
 
 import java.nio.charset.StandardCharsets;
 
@@ -84,6 +85,7 @@ public class mymod implements EditCardsSubscriber, EditCharactersSubscriber, Edi
     @Override
     public void receiveEditRelics() {
         BaseMod.addRelic(new diejia(), RelicType.SHARED); // RelicType表示是所有角色都能拿到的遗物，还是一个角色的独有遗物
+        BaseMod.addRelic(new reload_relic(), RelicType.SHARED);
     }
     @Override
     public void receiveEditKeywords() {
