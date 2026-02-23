@@ -1,5 +1,7 @@
 package examplemod.modcore;
+import basemod.AutoAdd;
 import basemod.BaseMod;
+import basemod.abstracts.CustomCard;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -47,18 +49,15 @@ public class mymod implements EditCardsSubscriber, EditCharactersSubscriber, Edi
 
     @Override
     public void receiveEditCards() {
-        BaseMod.addCard(new QuickStrike());
-        UnlockTracker.markCardAsSeen(QuickStrike.ID);
-        BaseMod.addCard(new Defend());
-        UnlockTracker.markCardAsSeen(Defend.ID);
-        BaseMod.addCard(new Strike());
-        UnlockTracker.markCardAsSeen(Strike.ID);
-
-        BaseMod.addCard(new Reloading1());
-        UnlockTracker.markCardAsSeen(Reloading1.ID);
-        BaseMod.addCard(new shoot1());
-        UnlockTracker.markCardAsSeen(shoot1.ID);
-
+        AutoAdd cards = new AutoAdd("mymod");
+        cards.packageFilter("examplemod.cards").setDefaultSeen(false).any(basemod.abstracts.CustomCard.class, (info, card) -> {
+            if (card != null) {
+                BaseMod.addCard(card);
+                if (info.seen) {
+                    UnlockTracker.unlockCard(card.cardID);
+                }
+            }
+        });
     }
 
     @Override

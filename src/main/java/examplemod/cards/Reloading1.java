@@ -14,7 +14,7 @@ public class Reloading1 extends CustomCard {
     private static final String NAME = "测试子弹能力";
     private static final String IMG_PATH = "img/cards/Strike.png";
     private static final int COST = 1;
-    private static final String DESCRIPTION = "获得 !M! 层 #y虎标弹";
+    private static final String DESCRIPTION = "获得 !M! 层 mymod:虎标弹";
     private static final CardType TYPE = CardType.POWER;
     private static final CardColor COLOR = MyCharacter.PlayerColorEnum.EXAMPLE_GREEN;
     private static final CardRarity RARITY = CardRarity.BASIC;
@@ -31,8 +31,7 @@ public class Reloading1 extends CustomCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeMagicNumber(2); // 升级后增加2层能力
-            this.rawDescription = "获得 !M! 层 #y虎标弹";
-            this.initializeDescription();
+            this.rawDescription = "获得 !M! 层 mymod:虎标弹";
             this.initializeDescription();
         }
     }

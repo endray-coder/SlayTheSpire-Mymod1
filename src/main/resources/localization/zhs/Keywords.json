@@ -2,5 +2,9 @@
   {
     "NAMES": ["虎标弹"],
     "DESCRIPTION": "拥有 #y子弹"
+  },
+  {
+    "NAMES": ["燃烧"],
+    "DESCRIPTION": "回合结束受到 #y燃烧 层数的伤害"
   }
 ]
