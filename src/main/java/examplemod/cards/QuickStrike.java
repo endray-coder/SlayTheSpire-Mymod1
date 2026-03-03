@@ -5,17 +5,21 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import examplemod.character.MyCharacter;
 
 public class QuickStrike extends CustomCard {
     public static final String ID = "mymod:QuickStrike";
-    private static final String NAME = "快机乱麻";
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    private static final String NAME = cardStrings.NAME;
     private static final String IMG_PATH = "img/cards/Strike.png";
     private static final int COST = 3;
-    private static final String DESCRIPTION = "造成 !D! 点伤害3次。每次 !M!% 概率增加6点";
+    private static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    private static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final CardType TYPE = CardType.ATTACK;
     //private static final CardColor COLOR = MyCharacter.PlayerColorEnum.EXAMPLE_GREEN;
     private static final CardColor COLOR =CardColor.COLORLESS;
@@ -40,7 +44,8 @@ public class QuickStrike extends CustomCard {
            // this.upgradeDamage(3); // 将该卡牌的伤害提高3点。
             this.atktime =5;
             this.name="超绝猛机杀击乱斩";
-            this.rawDescription = "造成 !D! 点伤害5次。每次 !M!% 概率增加6点";
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 
