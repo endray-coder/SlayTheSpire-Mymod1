@@ -3,5 +3,10 @@
     "NAME": "快机乱麻",
     "DESCRIPTION": "造成 !D! 点伤害3次。每次增加6点",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害5次。每次增加6点"
+  },
+  "mymod:shoot1": {
+    "NAME": "双重射击",
+    "DESCRIPTION": "攻击敌人2次，每次造成 !D! 点伤害并施加 !M! 层 mymod:燃烧 。消耗 1 层 mymod:虎标弹 ，造成额外 1 点伤害。",
+    "UPGRADE_DESCRIPTION": "攻击敌人2次，每次造成 !D! 点伤害并施加 !M! 层 mymod:燃烧 。消耗 1 层 mymod:虎标弹 ，造成额外 2 点伤害。"
   }
 }

@@ -7,7 +7,9 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import examplemod.character.MyCharacter;
 import examplemod.powers.burn;
@@ -15,10 +17,12 @@ import examplemod.powers.bullet;
 
 public class shoot1 extends CustomCard {
     public static final String ID = "mymod:shoot1";
-    private static final String NAME = "双重射击";
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    private static final String NAME = cardStrings.NAME;
     private static final String IMG_PATH = "img/cards/Strike.png";
     private static final int COST = 1;
-    private static final String DESCRIPTION = "攻击敌人2次，每次造成 !D! 点伤害并施加 !M! 层 mymod:燃烧 。消耗 1 层 mymod:虎标弹 ，造成额外 1 点伤害。";
+    private static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    private static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardColor COLOR = MyCharacter.PlayerColorEnum.EXAMPLE_GREEN;
     private static final CardRarity RARITY = CardRarity.BASIC;
@@ -39,7 +43,7 @@ public class shoot1 extends CustomCard {
             this.upgradeName();
             this.upgradeDamage(2); // 升级后每次伤害+2
             this.upgradeMagicNumber(2); // 升级后每次烧伤层数+1
-            this.rawDescription = "攻击敌人2次，每次造成 !D! 点伤害并施加 !M! 层 mymod:燃烧 。消耗 1 层 mymod:虎标弹 ，造成额外 2 点伤害。";
+            this.rawDescription = UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }
     }
