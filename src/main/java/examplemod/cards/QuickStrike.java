@@ -21,9 +21,9 @@ public class QuickStrike extends CustomCard {
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final CardType TYPE = CardType.ATTACK;
-    //private static final CardColor COLOR = MyCharacter.PlayerColorEnum.EXAMPLE_GREEN;
-    private static final CardColor COLOR =CardColor.COLORLESS;
-    private static final CardRarity RARITY = CardRarity.BASIC;
+    private static final CardColor COLOR = MyCharacter.PlayerColorEnum.EXAMPLE_GREEN;
+    //private static final CardColor COLOR =CardColor.COLORLESS;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     public static final double rate=0.7;
 
