@@ -28,5 +28,10 @@
     "NAME": "测试子弹能力",
     "DESCRIPTION": "获得 !M! 层 mymod:虎标弹",
     "UPGRADE_DESCRIPTION": "获得 !M! 层 mymod:虎标弹"
+  },
+  "mymod:Defendx3": {
+    "NAME": "三重铁壁",
+    "DESCRIPTION": "获得 !B! 点格挡，连续3次。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡，连续3次。"
   }
 }

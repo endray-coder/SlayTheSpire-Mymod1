@@ -9,8 +9,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import examplemod.character.MyCharacter;
 
 // 在examplemod.cards包下创建Defend.java
-public class Defend extends CustomCard {
-    public static final String ID = "mymod:Defend";
+public class Defendx3 extends CustomCard {
+    public static final String ID = "mymod:Defendx3";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = cardStrings.NAME;
     private static final String IMG_PATH = "img/cards/Strike.png";
@@ -22,9 +22,9 @@ public class Defend extends CustomCard {
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    public Defend() {
+    public Defendx3() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseBlock = 5;
+        this.baseBlock = 3;
         this.tags.add(CardTags.STARTER_DEFEND);
     }
 
@@ -32,13 +32,17 @@ public class Defend extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBlock(3); // 升级后格挡+3
-
+            this.upgradeBlock(2);
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+        for(int i=0;i<3;i++) {
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+
+        }
     }
 }
