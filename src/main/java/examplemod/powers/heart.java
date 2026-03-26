@@ -21,14 +21,14 @@ public class heart extends AbstractPower {
     // 能力的描述
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public heart(AbstractCreature owner, int Amount) {
+    public heart(AbstractCreature owner) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
         this.type = PowerType.DEBUFF;
 
         // 如果需要不能叠加的能力，只需将上面的Amount参数删掉，并把下面的Amount改成-1就行
-        this.amount = Amount;
+        this.amount = -1;
 
         // 添加一大一小两张能力图
         String path128 = "img/powers/Example84.png";

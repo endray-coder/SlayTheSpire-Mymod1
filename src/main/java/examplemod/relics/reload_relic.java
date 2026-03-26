@@ -9,6 +9,11 @@ import com.megacrit.cardcrawl.powers.BarricadePower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import examplemod.character.MyCharacter;
 import examplemod.powers.bullet;
+import examplemod.powers.heart;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 
 public class reload_relic extends CustomRelic {
     // 遗物ID（此处的ModHelper在“04 - 本地化”中提到）
@@ -21,7 +26,7 @@ public class reload_relic extends CustomRelic {
     private static final RelicTier RELIC_TIER = RelicTier.STARTER;
     // 点击音效
     private static final LandingSound LANDING_SOUND = LandingSound.FLAT;
-
+    private boolean bulletsAdded = false;
     public reload_relic() {
         super(ID, ImageMaster.loadImage(IMG_PATH), RELIC_TIER, LANDING_SOUND);
         // 如果你需要轮廓图，取消注释下面一行并注释上面一行，不需要就删除
@@ -46,11 +51,83 @@ public class reload_relic extends CustomRelic {
     @Override
     public void atBattleStart() {
         super.atBattleStart();
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
-                AbstractDungeon.player,
-                AbstractDungeon.player,
-                new bullet(AbstractDungeon.player, 12),
-                12
-        ));
+        bulletsAdded = false;
+    }
+
+    @Override
+    public void atTurnStart() {
+        super.atTurnStart();
+        if (!bulletsAdded) {
+            // 直接添加子弹到powers列表，确保立即生效
+            bullet bulletPower = (bullet) AbstractDungeon.player.getPower(bullet.POWER_ID);
+            if (bulletPower == null) {
+                AbstractDungeon.player.powers.add(new bullet(AbstractDungeon.player, 12));
+            } else if (bulletPower.amount <= 0) {
+                bulletPower.amount = 12;
+                bulletPower.updateDescription();
+            }
+            // 标记子弹已添加
+            bulletsAdded = true;
+        }
+        // 检查玩家是否有子弹
+        bullet bulletPower = (bullet) AbstractDungeon.player.getPower(bullet.POWER_ID);
+        // 检查玩家是否有heart能力作为标志
+        heart heartPower = (heart) AbstractDungeon.player.getPower(heart.POWER_ID);
+
+        if (bulletPower == null || bulletPower.amount <= 0) {
+            // 没有子弹且heart能力未存在
+            if (heartPower == null) {
+                // 获得3层敏捷
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                        AbstractDungeon.player,
+                        AbstractDungeon.player,
+                        new DexterityPower(AbstractDungeon.player, 3),
+                        3
+                ));
+                // 失去2层力量
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                        AbstractDungeon.player,
+                        AbstractDungeon.player,
+                        new StrengthPower(AbstractDungeon.player, -2),
+                        -2
+                ));
+                // 添加heart能力作为标志
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                        AbstractDungeon.player,
+                        AbstractDungeon.player,
+                        new heart(AbstractDungeon.player)
+                ));
+            }
+        } else {
+            // 有子弹且heart能力存在
+            if (heartPower != null) {
+                // 移除敏捷
+                AbstractPower dexterityPower = AbstractDungeon.player.getPower(DexterityPower.POWER_ID);
+                if (dexterityPower != null && dexterityPower.amount >= 3) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                            AbstractDungeon.player,
+                            AbstractDungeon.player,
+                            new DexterityPower(AbstractDungeon.player, -3),
+                            -3
+                    ));
+                }
+                // 恢复力量
+                AbstractPower strengthPower = AbstractDungeon.player.getPower(StrengthPower.POWER_ID);
+                if (strengthPower != null && strengthPower.amount <= -2) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                            AbstractDungeon.player,
+                            AbstractDungeon.player,
+                            new StrengthPower(AbstractDungeon.player, 2),
+                            2
+                    ));
+                }
+                // 移除heart能力标志
+                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(
+                        AbstractDungeon.player,
+                        AbstractDungeon.player,
+                        heartPower
+                ));
+            }
+        }
     }
 }
