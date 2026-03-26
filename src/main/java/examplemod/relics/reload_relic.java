@@ -55,8 +55,8 @@ public class reload_relic extends CustomRelic {
     }
 
     @Override
-    public void atTurnStart() {
-        super.atTurnStart();
+    public void atTurnStart() {           //游戏似乎是等我这个函数跑完才会处理队列的实践
+        super.atTurnStart();            //所以需要直接添加能力，不能addtobottom
         if (!bulletsAdded) {
             // 直接添加子弹到powers列表，确保立即生效
             bullet bulletPower = (bullet) AbstractDungeon.player.getPower(bullet.POWER_ID);
