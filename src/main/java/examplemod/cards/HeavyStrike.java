@@ -27,13 +27,13 @@ public class HeavyStrike extends CustomCard {
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardColor COLOR = MyCharacter.PlayerColorEnum.EXAMPLE_GREEN;
     private static final CardRarity RARITY = CardRarity.BASIC;
-    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
 
     public HeavyStrike() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage=15;
         this.baseMagicNumber=8;
-        this.tags.add(CardTags.STARTER_DEFEND);
+        this.magicNumber=this.baseMagicNumber;
     }
 
     @Override
@@ -80,6 +80,7 @@ public class HeavyStrike extends CustomCard {
             // 触发额外效果：造成额外伤害
             for(int i=0;i<times;i++) {
                 int extraDamage = this.upgraded ? 4 : 2;
+                int extraBurn=this.upgraded ? 4 : 2;
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(
                         m,
                         new DamageInfo(p, extraDamage, DamageInfo.DamageType.NORMAL),
@@ -88,8 +89,8 @@ public class HeavyStrike extends CustomCard {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
                         m,
                         p,
-                        new burn(m, 2),
-                        2
+                        new burn(m, extraBurn),
+                        extraBurn
                 ));
             }
         }

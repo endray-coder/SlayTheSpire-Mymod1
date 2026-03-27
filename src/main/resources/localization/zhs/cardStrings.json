@@ -19,6 +19,12 @@
     "DESCRIPTION": "获得 !B! 点格挡。",
     "UPGRADE_DESCRIPTION": "获得 !B! 点格挡。"
   },
+  "mymod:HeavyStrike": {
+    "NAME": "重击",
+    "DESCRIPTION": "造成 !D! 点伤害,并施加 !M! 层 mymod:燃烧 。消耗最多2层 mymod:虎标弹 ,每颗子弹造成额外 2 点伤害,2层 mymod:燃烧 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害,并施加 !M! 层 mymod:燃烧 。消耗最多2层 mymod:虎标弹 ,每颗子弹造成额外 4 点伤害,4层 mymod:燃烧 。"
+  }
+  ,
   "mymod:QuickStrike": {
     "NAME": "快机乱麻",
     "DESCRIPTION": "造成 !D! 点伤害3次。每次 !M!% 概率增加6点",
@@ -33,5 +39,10 @@
     "NAME": "三重铁壁",
     "DESCRIPTION": "获得 !B! 点格挡，连续3次。",
     "UPGRADE_DESCRIPTION": "获得 !B! 点格挡，连续3次。"
-  }
+  },
+  "mymod:Longtenghuyue":{
+  "NAME": "龙腾虎跃",
+  "DESCRIPTION": "抽 !M! 张牌,消耗 1 层 mymod:虎标弹 ，重复一次",
+  "UPGRADE_DESCRIPTION": "抽 !M! 张牌,消耗 1 层 mymod:虎标弹，重复一次"
+}
 }
