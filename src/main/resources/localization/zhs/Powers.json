@@ -18,7 +18,7 @@
     ]
   },
   "mymod:ReloadingPower": {
-    "NAME": "弹夹扩容",
+    "NAME": "子弹装填",
     "DESCRIPTIONS": [
       "每回合开始时获得 #b",
       " 层虎标弹。",
