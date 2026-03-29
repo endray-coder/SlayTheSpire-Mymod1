@@ -8,10 +8,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import examplemod.character.MyCharacter;
-import examplemod.powers.ExtendedMagazinePower;
+import examplemod.powers.ReloadingPower;
 
-public class ExtendedMagazine extends CustomCard {
-    public static final String ID = "mymod:ExtendedMagazine";
+public class Reloading extends CustomCard {
+    public static final String ID = "mymod:Reloading";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = cardStrings.NAME;
     private static final String IMG_PATH = "img/cards/Strike.png";
@@ -23,7 +23,7 @@ public class ExtendedMagazine extends CustomCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    public ExtendedMagazine() {
+    public Reloading() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
@@ -45,7 +45,7 @@ public class ExtendedMagazine extends CustomCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
                 p, // 目标
                 p, // 来源
-                new ExtendedMagazinePower(p, this.magicNumber), // 自定义能力
+                new ReloadingPower(p, this.magicNumber), // 自定义能力
                 this.magicNumber // 层数
         ));
     }

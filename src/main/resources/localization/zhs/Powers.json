@@ -17,7 +17,7 @@
       "若没有子弹，则获得+3敏捷并-2力量。回合开始时若有子弹，则取消"
     ]
   },
-  "mymod:ExtendedMagazinePower": {
+  "mymod:ReloadingPower": {
     "NAME": "弹夹扩容",
     "DESCRIPTIONS": [
       "每回合开始时获得 #b",

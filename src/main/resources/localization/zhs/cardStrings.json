@@ -10,7 +10,7 @@
     "UPGRADE_DESCRIPTION": "攻击敌人2次，每次造成 !D! 点伤害并施加 !M! 层 mymod:燃烧 。消耗 1 层 mymod:虎标弹 ，造成额外 2 点伤害。"
   },
   "mymod:shoot2": {
-    "NAME": "三重射击",
+    "NAME": "防御姿态",
     "DESCRIPTION": "攻击敌人3次，每次造成 !D! 点伤害并施加 !M! 层 mymod:燃烧 。消耗 2 层 mymod:虎标弹 ，每消耗1层子弹造成额外 2 点伤害并施加 2 层 mymod:燃烧 。",
     "UPGRADE_DESCRIPTION": "攻击敌人3次，每次造成 !D! 点伤害并施加 !M! 层 mymod:燃烧 。消耗 2 层 mymod:虎标弹 ，每消耗1层子弹造成额外 4 点伤害并施加 2 层 mymod:燃烧 。"
   },
@@ -32,8 +32,8 @@
   },
   "mymod:Reloading1": {
     "NAME": "测试子弹能力",
-    "DESCRIPTION": "获得 !M! 层 mymod:虎标弹",
-    "UPGRADE_DESCRIPTION": "获得 !M! 层 mymod:虎标弹"
+    "DESCRIPTION": "获得 !M! 层 mymod:虎标弹 ",
+    "UPGRADE_DESCRIPTION": "获得 !M! 层 mymod:虎标弹 "
   },
   "mymod:Defendx3": {
     "NAME": "三重铁壁",
@@ -43,11 +43,11 @@
   "mymod:Longtenghuyue":{
   "NAME": "龙腾虎跃",
   "DESCRIPTION": "抽 !M! 张牌,消耗 1 层 mymod:虎标弹 ，重复一次",
-  "UPGRADE_DESCRIPTION": "抽 !M! 张牌,消耗 1 层 mymod:虎标弹，重复一次"
+  "UPGRADE_DESCRIPTION": "抽 !M! 张牌,消耗 1 层 mymod:虎标弹 ，重复一次"
   },
-  "mymod:ExtendedMagazine": {
-    "NAME": "弹夹扩容",
-    "DESCRIPTION": "每回合开始时获得 !M! 层 mymod:虎标弹。",
-    "UPGRADE_DESCRIPTION": "每回合开始时获得 !M! 层 mymod:虎标弹。"
+  "mymod:Reloading": {
+    "NAME": "快速装填",
+    "DESCRIPTION": "每回合开始时获得 !M! 层 mymod:虎标弹 。",
+    "UPGRADE_DESCRIPTION": "每回合开始时获得 !M! 层 mymod:虎标弹 。"
   }
 }

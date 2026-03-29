@@ -9,13 +9,13 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-public class ExtendedMagazinePower extends AbstractPower {
-    public static final String POWER_ID = "mymod:ExtendedMagazinePower";
+public class ReloadingPower extends AbstractPower {
+    public static final String POWER_ID = "mymod:ReloadingPower";
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final String NAME = powerStrings.NAME;
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public ExtendedMagazinePower(AbstractCreature owner, int amount) {
+    public ReloadingPower(AbstractCreature owner, int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
