@@ -58,43 +58,26 @@ public class shoot1 extends CustomCard {
                     new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL),
                     AbstractGameAction.AttackEffect.SLASH_HORIZONTAL
             ));
-
-            // 施加烧伤层数（使用magicNumber变量）
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
-                    m,
-                    p,
-                    new burn(m, this.magicNumber),
-                    this.magicNumber
-            ));
         }
 
         // 检查是否拥有足够的子弹，有则消耗并触发额外效果
-        bullet bulletPower = (bullet) p.getPower(bullet.POWER_ID);
-        if (bulletPower != null && bulletPower.amount >= 1) { // 消耗1层子弹
-            // 消耗子弹
-            int bulletsToConsume = 1;
-            if (bulletPower.amount > bulletsToConsume) {
-                // 如果子弹数量多于需要消耗的，减少子弹层数
-                bulletPower.amount -= bulletsToConsume;
-                bulletPower.updateDescription();
-            } else {
-                // 如果子弹数量正好或少于需要消耗的，移除子弹能力
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, bulletPower));
-            }
-
+        if (bullet.consumeBullets(p, 1)) { // 消耗1层子弹
             // 触发额外效果：造成额外伤害
-            int extraDamage = this.upgraded ? 2 : 1; // 升级后额外伤害为2，基础为1
+            int extraDamage = this.upgraded ? 3 : 2;
             AbstractDungeon.actionManager.addToBottom(new DamageAction(
                     m,
                     new DamageInfo(p, extraDamage, DamageInfo.DamageType.NORMAL),
                     AbstractGameAction.AttackEffect.FIRE
             ));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
-                    m,
-                    p,
-                    new burn(m, 2),
-                    2
-            ));
+            
+            // 施加烧伤层数（使用magicNumber变量）
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                        m,
+                        p,
+                        new burn(m, this.magicNumber),
+                        this.magicNumber
+                ));
+
         }
     }
 }

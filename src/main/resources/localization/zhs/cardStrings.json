@@ -6,8 +6,8 @@
   },
   "mymod:shoot1": {
     "NAME": "双重射击",
-    "DESCRIPTION": "攻击敌人2次，每次造成 !D! 点伤害并施加 !M! 层 mymod:燃烧 。消耗 1 层 mymod:虎标弹 ，造成额外 1 点伤害。",
-    "UPGRADE_DESCRIPTION": "攻击敌人2次，每次造成 !D! 点伤害并施加 !M! 层 mymod:燃烧 。消耗 1 层 mymod:虎标弹 ，造成额外 2 点伤害。"
+    "DESCRIPTION": "攻击敌人2次，每次造成 !D! 点伤害。消耗 1 层 mymod:虎标弹 ，造成额外 2 点伤害并施加 !M! 层 mymod:燃烧 .",
+    "UPGRADE_DESCRIPTION": "攻击敌人2次，每次造成 !D! 点伤害。消耗 1 层 mymod:虎标弹 ，造成额外 3 点伤害并施加 !M! 层 mymod:燃烧 ."
   },
   "mymod:shoot2": {
     "NAME": "防御姿态",

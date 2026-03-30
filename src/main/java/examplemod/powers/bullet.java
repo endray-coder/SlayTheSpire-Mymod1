@@ -1,8 +1,11 @@
 package examplemod.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -40,5 +43,40 @@ public class bullet extends AbstractPower {
     // 能力在更新时如何修改描述
     public void updateDescription() {
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+    }
+
+    // 静态方法：消耗子弹并触发效果
+    public static boolean consumeBullets(AbstractPlayer player, int amount) {
+        bullet bulletPower = (bullet) player.getPower(POWER_ID);
+        if (bulletPower != null && bulletPower.amount >= amount) {
+            // 计算实际消耗的子弹数量
+            int actualConsumed = Math.min(bulletPower.amount, amount);
+            
+            // 消耗子弹
+            if (bulletPower.amount > actualConsumed) {
+                bulletPower.amount -= actualConsumed;
+                bulletPower.updateDescription();
+            } else {
+                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(player, player, bulletPower));
+            }
+            
+            // 触发子弹消耗效果
+            triggerBulletConsumedEffects(player, actualConsumed);
+            return true;
+        }
+        return false;
+    }
+
+    // 触发子弹消耗效果
+    private static void triggerBulletConsumedEffects(AbstractPlayer player, int times) {
+        // 触发 BulletDrawPower
+//        BulletDrawPower bulletDrawPower = (BulletDrawPower) player.getPower(BulletDrawPower.POWER_ID);
+//        if (bulletDrawPower != null) {
+//            for (int i = 0; i < times; i++) {
+//                bulletDrawPower.onBulletConsumed();
+//            }
+//        }
+//
+        // 这里可以添加其他与子弹消耗相关的能力触发
     }
 }
