@@ -61,7 +61,8 @@ public class shoot1 extends CustomCard {
         }
 
         // 检查是否拥有足够的子弹，有则消耗并触发额外效果
-        if (bullet.consumeBullets(p, 1)) { // 消耗1层子弹
+        int consumed = bullet.consumeBullets(p, 1); // 消耗1层子弹
+        if (consumed > 0) {
             // 触发额外效果：造成额外伤害
             int extraDamage = this.upgraded ? 3 : 2;
             AbstractDungeon.actionManager.addToBottom(new DamageAction(

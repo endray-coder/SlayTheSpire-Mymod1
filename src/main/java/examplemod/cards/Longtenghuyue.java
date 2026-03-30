@@ -45,10 +45,8 @@ public class Longtenghuyue extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        int times = 0;
-        if (bullet.consumeBullets(p, 1)) { // 消耗1层子弹
-            times = 1;
-        }
+        int consumed = bullet.consumeBullets(p, 1); // 消耗1层子弹
+        int times = (consumed > 0) ? 1 : 0;
 
         for (int i = 0; i < 1 + times; i++) {
             AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));

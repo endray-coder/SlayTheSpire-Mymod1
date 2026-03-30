@@ -57,7 +57,8 @@ public class HeavyStrike extends CustomCard {
         ));
         // 检查是否拥有足够的子弹，有则消耗并触发额外效果
         int bulletsToConsume = 2;
-        if (bullet.consumeBullets(p, bulletsToConsume)) { // 消耗2层子弹
+        int consumed = bullet.consumeBullets(p, bulletsToConsume); // 消耗最多2层子弹
+        if (consumed > 0) {
             // 施加烧伤层数（使用magicNumber变量）
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
                     m,
@@ -67,7 +68,7 @@ public class HeavyStrike extends CustomCard {
             ));
             
             // 触发额外效果：造成额外伤害
-            for(int i=0;i<bulletsToConsume;i++) {
+            for(int i=0;i<consumed;i++) {
                 int extraDamage = this.upgraded ? 4 : 2;
                 int extraBurn=this.upgraded ? 4 : 2;
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(

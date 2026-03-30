@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import examplemod.powers.BulletDrawPower;
 
 public class bullet extends AbstractPower {
     // 能力的ID
@@ -45,8 +46,8 @@ public class bullet extends AbstractPower {
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
-    // 静态方法：消耗子弹并触发效果
-    public static boolean consumeBullets(AbstractPlayer player, int amount) {
+    // 静态方法：消耗子弹并触发效果，返回实际消耗的子弹数量
+    public static int consumeBullets(AbstractPlayer player, int amount) {
         bullet bulletPower = (bullet) player.getPower(POWER_ID);
         if (bulletPower != null && bulletPower.amount >= amount) {
             // 计算实际消耗的子弹数量
@@ -62,9 +63,9 @@ public class bullet extends AbstractPower {
             
             // 触发子弹消耗效果
             triggerBulletConsumedEffects(player, actualConsumed);
-            return true;
+            return actualConsumed;
         }
-        return false;
+        return 0;
     }
 
     // 触发子弹消耗效果
