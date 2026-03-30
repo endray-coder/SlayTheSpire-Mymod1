@@ -27,8 +27,8 @@
   ,
   "mymod:QuickStrike": {
     "NAME": "快机乱麻",
-    "DESCRIPTION": "造成 !D! 点伤害3次。每次 !M!% 概率增加6点",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害5次。每次 !M!% 概率增加6点"
+    "DESCRIPTION": "造成 !D! 点伤害3次。每次 !M!% 概率增加6点。消耗所有 mymod:虎标弹 ，对所有敌人施加相同层数的 mymod:燃烧 。使用后将 mymod:虎标弹 数量重置为 12。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害5次。每次 !M!% 概率增加6点。消耗所有 mymod:虎标弹 ，对所有敌人施加相同层数的 mymod:燃烧 。使用后将 mymod:虎标弹 数量重置为 12。"
   },
   "mymod:Reloading1": {
     "NAME": "测试子弹能力",

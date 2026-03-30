@@ -11,6 +11,9 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import examplemod.character.MyCharacter;
+import examplemod.powers.bullet;
+import examplemod.powers.burn;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 
 public class QuickStrike extends CustomCard {
     public static final String ID = "mymod:QuickStrike";
@@ -88,6 +91,34 @@ public class QuickStrike extends CustomCard {
 
 
         }
+
+        // 消耗所有子弹并给予同样层数的燃烧
+        bullet bulletPower = (bullet) p.getPower(bullet.POWER_ID);
+        if (bulletPower != null && bulletPower.amount > 0) {
+            int bulletCount = bulletPower.amount;
+            int extraburn=this.upgraded?2:1;
+            // 消耗所有子弹
+            bullet.consumeBullets(p, bulletCount);
+            // 对所有敌人施加燃烧效果
+            for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+                if (!monster.isDeadOrEscaped()) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                            monster,
+                            p,
+                            new burn(monster, bulletCount*extraburn),
+                            bulletCount*extraburn
+                    ));
+                }
+            }
+        }
+            // 如果没有子弹能力，添加新的
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                    p,
+                    p,
+                    new bullet(p, 12),
+                    12
+            ));
+
 
         // 更新魔法值（概率）
         this.baseMagicNumber = (int)(rate * 100);
