@@ -25,7 +25,7 @@ public class shoot2 extends CustomCard {
     private static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardColor COLOR = MyCharacter.PlayerColorEnum.EXAMPLE_GREEN;
-    private static final CardRarity RARITY = CardRarity.BASIC;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
     public shoot2() {

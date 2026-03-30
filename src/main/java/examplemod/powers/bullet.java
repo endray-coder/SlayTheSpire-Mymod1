@@ -70,13 +70,12 @@ public class bullet extends AbstractPower {
     // 触发子弹消耗效果
     private static void triggerBulletConsumedEffects(AbstractPlayer player, int times) {
         // 触发 BulletDrawPower
-//        BulletDrawPower bulletDrawPower = (BulletDrawPower) player.getPower(BulletDrawPower.POWER_ID);
-//        if (bulletDrawPower != null) {
-//            for (int i = 0; i < times; i++) {
-//                bulletDrawPower.onBulletConsumed();
-//            }
-//        }
-//
-        // 这里可以添加其他与子弹消耗相关的能力触发
+        BulletDrawPower bulletDrawPower = (BulletDrawPower) player.getPower(BulletDrawPower.POWER_ID);
+        if (bulletDrawPower != null) {
+            for (int i = 0; i < times; i++) {
+                bulletDrawPower.onBulletConsumed();
+            }
+        }
+
     }
 }

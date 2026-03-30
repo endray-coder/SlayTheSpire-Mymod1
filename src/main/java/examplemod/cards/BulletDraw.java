@@ -1,4 +1,3 @@
-// 创建一个名为TestBulletCard的新卡牌
 package examplemod.cards;
 
 import basemod.abstracts.CustomCard;
@@ -9,10 +8,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import examplemod.character.MyCharacter;
-import examplemod.powers.bullet;
+import examplemod.powers.BulletDrawPower;
 
-public class Reloading1 extends CustomCard {
-    public static final String ID = "mymod:Reloading1";
+public class BulletDraw extends CustomCard {
+    public static final String ID = "mymod:BulletDraw";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = cardStrings.NAME;
     private static final String IMG_PATH = "img/cards/Strike.png";
@@ -21,12 +20,12 @@ public class Reloading1 extends CustomCard {
     private static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final CardType TYPE = CardType.POWER;
     private static final CardColor COLOR = MyCharacter.PlayerColorEnum.EXAMPLE_GREEN;
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    public Reloading1() {
+    public BulletDraw() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseMagicNumber = 6;
+        this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
     }
 
@@ -34,7 +33,7 @@ public class Reloading1 extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(2); // 升级后增加2层能力
+            this.upgradeMagicNumber(1); // 升级后抽牌数+1
             this.rawDescription = UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }
@@ -42,11 +41,11 @@ public class Reloading1 extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // 应用bullet能力
+        // 应用BulletDrawPower能力
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
                 p, // 目标
                 p, // 来源
-                new bullet(p, this.magicNumber), // 你的自定义能力
+                new BulletDrawPower(p, this.magicNumber), // 自定义能力
                 this.magicNumber // 层数
         ));
     }

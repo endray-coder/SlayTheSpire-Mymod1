@@ -45,6 +45,16 @@
   "DESCRIPTION": "抽 !M! 张牌,消耗 1 层 mymod:虎标弹 ，重复一次",
   "UPGRADE_DESCRIPTION": "抽 !M! 张牌,消耗 1 层 mymod:虎标弹 ，重复一次"
   },
+  "mymod:BulletDraw": {
+    "NAME": "弹夹抽牌",
+    "DESCRIPTION": "每当你消耗一颗子弹，抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "每当你消耗一颗子弹，抽 !M! 张牌。"
+  },
+  "mymod:ReloadStrike": {
+    "NAME": "天退星：装填",
+    "DESCRIPTION": "造成 !D! 点伤害，将 mymod:虎标弹 数量重置为 12，结束回合。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，将 mymod:虎标弹 数量重置为 12，结束回合。"
+  },
   "mymod:Reloading": {
     "NAME": "快速装填",
     "DESCRIPTION": "每回合开始时获得 !M! 层 mymod:虎标弹 。",

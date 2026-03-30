@@ -26,7 +26,7 @@ public class HeavyStrike extends CustomCard {
     private static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardColor COLOR = MyCharacter.PlayerColorEnum.EXAMPLE_GREEN;
-    private static final CardRarity RARITY = CardRarity.BASIC;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
     public HeavyStrike() {

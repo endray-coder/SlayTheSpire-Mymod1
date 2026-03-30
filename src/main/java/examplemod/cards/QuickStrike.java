@@ -24,7 +24,7 @@ public class QuickStrike extends CustomCard {
     private static final CardColor COLOR = MyCharacter.PlayerColorEnum.EXAMPLE_GREEN;
     //private static final CardColor COLOR =CardColor.COLORLESS;
     private static final CardRarity RARITY = CardRarity.RARE;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     public static final double rate=0.7;
 
     private int atktime =3;
@@ -66,17 +66,25 @@ public class QuickStrike extends CustomCard {
             if (Math.random() < rate) {
                 this.baseDamage += 6;
                 // 添加伤害提升的视觉效果
-                AbstractDungeon.effectList.add(new FlashAtkImgEffect(m.hb.cX, m.hb.cY, AbstractGameAction.AttackEffect.LIGHTNING));
+                for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+                    if (!monster.isDeadOrEscaped()) {
+                        AbstractDungeon.effectList.add(new FlashAtkImgEffect(monster.hb.cX, monster.hb.cY, AbstractGameAction.AttackEffect.LIGHTNING));
+                    }
+                }
             }
             this.damage = this.baseDamage;
             this.applyPowers();
             // 步骤2：结算伤害（用框架计算好的 damage，这是带倍率的最终值）
-            AbstractDungeon.actionManager.addToBottom(
-                    new DamageAction(
-                            m,
-                            new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL)
-                    )
-            );
+            for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+                if (!monster.isDeadOrEscaped()) {
+                    AbstractDungeon.actionManager.addToBottom(
+                            new DamageAction(
+                                    monster,
+                                    new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL)
+                            )
+                    );
+                }
+            }
 
 
         }
