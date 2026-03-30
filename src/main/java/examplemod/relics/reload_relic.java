@@ -2,14 +2,12 @@ package examplemod.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.powers.BarricadePower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import examplemod.character.MyCharacter;
 import examplemod.powers.bullet;
-import examplemod.powers.heart;
+import examplemod.powers.overheat;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
@@ -71,12 +69,12 @@ public class reload_relic extends CustomRelic {
         }
         // 检查玩家是否有子弹
         bullet bulletPower = (bullet) AbstractDungeon.player.getPower(bullet.POWER_ID);
-        // 检查玩家是否有heart能力作为标志
-        heart heartPower = (heart) AbstractDungeon.player.getPower(heart.POWER_ID);
+        // 检查玩家是否有overheat能力作为标志
+        overheat overheatPower = (overheat) AbstractDungeon.player.getPower(overheat.POWER_ID);
 
         if (bulletPower == null || bulletPower.amount <= 0) {
-            // 没有子弹且heart能力未存在
-            if (heartPower == null) {
+            // 没有子弹且overheat能力未存在
+            if (overheatPower == null) {
                 // 获得3层敏捷
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
                         AbstractDungeon.player,
@@ -91,16 +89,16 @@ public class reload_relic extends CustomRelic {
                         new StrengthPower(AbstractDungeon.player, -2),
                         -2
                 ));
-                // 添加heart能力作为标志
+                // 添加overheat能力作为标志
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
                         AbstractDungeon.player,
                         AbstractDungeon.player,
-                        new heart(AbstractDungeon.player)
+                        new overheat(AbstractDungeon.player)
                 ));
             }
         } else {
-            // 有子弹且heart能力存在
-            if (heartPower != null) {
+            // 有子弹且overheat能力存在
+            if (overheatPower != null) {
                 // 移除敏捷
                 AbstractPower dexterityPower = AbstractDungeon.player.getPower(DexterityPower.POWER_ID);
                 if (dexterityPower != null && dexterityPower.amount >= 3) {
@@ -121,11 +119,11 @@ public class reload_relic extends CustomRelic {
                             2
                     ));
                 }
-                // 移除heart能力标志
+                // 移除overheat能力标志
                 AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(
                         AbstractDungeon.player,
                         AbstractDungeon.player,
-                        heartPower
+                        overheatPower
                 ));
             }
         }
