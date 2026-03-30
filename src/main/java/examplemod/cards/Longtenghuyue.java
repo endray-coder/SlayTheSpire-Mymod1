@@ -45,21 +45,9 @@ public class Longtenghuyue extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        bullet bulletPower = (bullet) p.getPower(bullet.POWER_ID);
-
         int times = 0;
-        if (bulletPower != null && bulletPower.amount >= 1) { // 消耗1层子弹
-            int bulletsToConsume = 1;
-            times = Math.min(bulletPower.amount, bulletsToConsume);
-            if (bulletPower.amount > bulletsToConsume) {
-                // 如果子弹数量多于需要消耗的，减少子弹层数
-                bulletPower.amount -= bulletsToConsume;
-                bulletPower.updateDescription();
-            } else {
-                // 如果子弹数量正好或少于需要消耗的，移除子弹能力
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, bulletPower));
-            }
-
+        if (bullet.consumeBullets(p, 1)) { // 消耗1层子弹
+            times = 1;
         }
 
         for (int i = 0; i < 1 + times; i++) {

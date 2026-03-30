@@ -50,7 +50,7 @@ public class shoot2 extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // 执行两次攻击（基础效果，无论是否有子弹都执行）
+        // 执行三次攻击（基础效果，无论是否有子弹都执行）
         for (int i = 0; i < 3; i++) {
             // 造成伤害
             AbstractDungeon.actionManager.addToBottom(new DamageAction(
@@ -58,33 +58,23 @@ public class shoot2 extends CustomCard {
                     new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL),
                     AbstractGameAction.AttackEffect.SLASH_HORIZONTAL
             ));
-
-            // 施加烧伤层数（使用magicNumber变量）
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
-                    m,
-                    p,
-                    new burn(m, this.magicNumber),
-                    this.magicNumber
-            ));
         }
 
         // 检查是否拥有足够的子弹，有则消耗并触发额外效果
-        bullet bulletPower = (bullet) p.getPower(bullet.POWER_ID);
-        if (bulletPower != null && bulletPower.amount >= 1) { // 消耗1层子弹
-            // 消耗子弹
-            int bulletsToConsume = 2,times=0;
-            times=Math.min(bulletPower.amount,bulletsToConsume);
-            if (bulletPower.amount > bulletsToConsume) {
-                // 如果子弹数量多于需要消耗的，减少子弹层数
-                bulletPower.amount -= bulletsToConsume;
-                bulletPower.updateDescription();
-            } else {
-                // 如果子弹数量正好或少于需要消耗的，移除子弹能力
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, bulletPower));
+        int bulletsToConsume = 2;
+        if (bullet.consumeBullets(p, bulletsToConsume)) { // 消耗2层子弹
+            // 施加烧伤层数（使用magicNumber变量）
+            for (int i = 0; i < 3; i++) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                        m,
+                        p,
+                        new burn(m, this.magicNumber),
+                        this.magicNumber
+                ));
             }
-
+            
             // 触发额外效果：造成额外伤害
-            for(int i=0;i<times;i++) {
+            for(int i=0;i<bulletsToConsume;i++) {
                 int extraDamage = this.upgraded ? 4 : 2;
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(
                         m,

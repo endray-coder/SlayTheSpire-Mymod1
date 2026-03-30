@@ -10,9 +10,9 @@
     "UPGRADE_DESCRIPTION": "攻击敌人2次，每次造成 !D! 点伤害。消耗 1 层 mymod:虎标弹 ，造成额外 3 点伤害并施加 !M! 层 mymod:燃烧 ."
   },
   "mymod:shoot2": {
-    "NAME": "防御姿态",
-    "DESCRIPTION": "攻击敌人3次，每次造成 !D! 点伤害并施加 !M! 层 mymod:燃烧 。消耗 2 层 mymod:虎标弹 ，每消耗1层子弹造成额外 2 点伤害并施加 2 层 mymod:燃烧 。",
-    "UPGRADE_DESCRIPTION": "攻击敌人3次，每次造成 !D! 点伤害并施加 !M! 层 mymod:燃烧 。消耗 2 层 mymod:虎标弹 ，每消耗1层子弹造成额外 4 点伤害并施加 2 层 mymod:燃烧 。"
+    "NAME": "三重射击",
+    "DESCRIPTION": "攻击敌人3次，每次造成 !D! 点伤害。消耗 2 层 mymod:虎标弹 ，施加 3 次 !M! 层 mymod:燃烧 ，每消耗1层子弹造成额外 2 点伤害并施加 2 层 mymod:燃烧 。",
+    "UPGRADE_DESCRIPTION": "攻击敌人3次，每次造成 !D! 点伤害。消耗 2 层 mymod:虎标弹 ，施加 3 次 !M! 层 mymod:燃烧 ，每消耗1层子弹造成额外 4 点伤害并施加 2 层 mymod:燃烧 。"
   },
   "mymod:Defend": {
     "NAME": "铁壁防御",
@@ -21,8 +21,8 @@
   },
   "mymod:HeavyStrike": {
     "NAME": "重击",
-    "DESCRIPTION": "造成 !D! 点伤害,并施加 !M! 层 mymod:燃烧 。消耗最多2层 mymod:虎标弹 ,每颗子弹造成额外 2 点伤害,2层 mymod:燃烧 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害,并施加 !M! 层 mymod:燃烧 。消耗最多2层 mymod:虎标弹 ,每颗子弹造成额外 4 点伤害,4层 mymod:燃烧 。"
+    "DESCRIPTION": "造成 !D! 点伤害。消耗最多2层 mymod:虎标弹 ，施加 !M! 层 mymod:燃烧 ，每消耗1层子弹造成额外 2 点伤害并施加 2 层 mymod:燃烧 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。消耗最多2层 mymod:虎标弹 ，施加 !M! 层 mymod:燃烧 ，每消耗1层子弹造成额外 4 点伤害并施加 4 层 mymod:燃烧 。"
   }
   ,
   "mymod:QuickStrike": {
