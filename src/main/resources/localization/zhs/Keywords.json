@@ -6,5 +6,9 @@
   {
     "NAMES": ["燃烧"],
     "DESCRIPTION": "回合结束受到 #y燃烧 层数的伤害"
+  },
+  {
+    "NAMES": ["猎物"],
+    "DESCRIPTION": "失去 5 点力量。"
   }
 ]

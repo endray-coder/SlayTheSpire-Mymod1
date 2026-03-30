@@ -55,6 +55,11 @@
     "DESCRIPTION": "造成 !D! 点伤害，将 mymod:虎标弹 数量重置为 12，结束回合。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，将 mymod:虎标弹 数量重置为 12，结束回合。"
   },
+  "mymod:PreyCard": {
+    "NAME": "标记猎物",
+    "DESCRIPTION": "给予一个敌人 mymod:猎物 。",
+    "UPGRADE_DESCRIPTION": "给予一个敌人 mymod:猎物 。"
+  },
   "mymod:Reloading": {
     "NAME": "快速装填",
     "DESCRIPTION": "每回合开始时获得 !M! 层 mymod:虎标弹 。",
