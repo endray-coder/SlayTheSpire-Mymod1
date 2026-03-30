@@ -27,7 +27,7 @@
   },
   "mymod:PreyPower": {
     "NAME": "猎物",
-    "DESCRIPTIONS": ["失去 5 点力量。"]
+    "DESCRIPTIONS": ["失去 5 点力量。(不可叠加)"]
   },
   "mymod:BulletDrawPower": {
     "NAME": "弹夹抽牌",

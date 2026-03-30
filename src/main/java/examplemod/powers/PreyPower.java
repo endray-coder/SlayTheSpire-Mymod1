@@ -24,7 +24,7 @@ public class PreyPower extends AbstractPower {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
-        this.type = PowerType.DEBUFF;
+        this.type = PowerType.BUFF;
 
         // 不可叠加的能力
         this.amount = -1;
