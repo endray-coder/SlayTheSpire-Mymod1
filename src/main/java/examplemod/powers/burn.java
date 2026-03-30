@@ -47,6 +47,8 @@ public class burn extends AbstractPower {
                 new DamageInfo(this.owner, this.amount, DamageInfo.DamageType.THORNS),  // 伤害信息，使用荆棘类型
                 com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.FIRE  // 伤害效果
         ));
+        this.amount = (this.amount * 2) / 3;
+        this.updateDescription();
     }
     // 能力在更新时如何修改描述
     public void updateDescription() {
