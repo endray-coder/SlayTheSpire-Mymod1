@@ -77,7 +77,12 @@
   },
   "mymod:BulletDefense": {
     "NAME": "弹幕防御",
-    "DESCRIPTION": "获得 2 层弹幕防御。每消耗一颗子弹，获得 2 点格挡。",
-    "UPGRADE_DESCRIPTION": "获得 2 层弹幕防御。每消耗一颗子弹，获得 2 点格挡。"
+    "DESCRIPTION": "获得 2 层弹幕防御。每消耗一颗子弹，获得与弹幕防御层数相等的格挡。",
+    "UPGRADE_DESCRIPTION": "获得 2 层弹幕防御。每消耗一颗子弹，获得与弹幕防御层数相等的格挡。"
+  },
+  "mymod:Ignite": {
+    "NAME": "助燃",
+    "DESCRIPTION": "造成 !D! 点伤害，每有2层燃烧额外造成 1 点伤害。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，每有2层燃烧额外造成 1 点伤害。"
   }
 }

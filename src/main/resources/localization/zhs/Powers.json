@@ -40,5 +40,9 @@
       " 张牌。",
       " 张牌。"
     ]
+  },
+  "mymod:BulletDefensePower": {
+    "NAME": "弹幕防御",
+    "DESCRIPTIONS": ["每消耗一颗子弹，获得与弹幕防御层数相等的格挡。当前层数：" , "。"]
   }
 }

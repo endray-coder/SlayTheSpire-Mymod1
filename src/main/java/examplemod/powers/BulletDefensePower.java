@@ -44,8 +44,8 @@ public class BulletDefensePower extends AbstractPower {
     // 当子弹被消耗时触发
     public void onBulletConsumed() {
         if (this.amount > 0) {
-            // 每消耗一颗子弹，获得2格挡
-            addToBot(new GainBlockAction(owner, owner, 2));
+            // 每消耗一颗子弹，获得格挡
+            addToBot(new GainBlockAction(owner, owner, this.amount));
         }
     }
 }
