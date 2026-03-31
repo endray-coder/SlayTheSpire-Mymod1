@@ -69,5 +69,10 @@
     "NAME": "心-天退星",
     "DESCRIPTION": "获得 1 层 mymod:心-天退星 。",
     "UPGRADE_DESCRIPTION": "获得 1 层 mymod:心-天退星 。"
+  },
+  "mymod:FanTheFlames": {
+    "NAME": "煽风点火",
+    "DESCRIPTION": "使所有敌人的 mymod:燃烧 层数翻倍。 #y消耗 ",
+    "UPGRADE_DESCRIPTION": "使所有敌人的 mymod:燃烧 层数翻倍。"
   }
 }
