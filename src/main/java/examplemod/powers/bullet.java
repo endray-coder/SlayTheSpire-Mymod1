@@ -81,6 +81,14 @@ public class bullet extends AbstractPower {
                 bulletDrawPower.onBulletConsumed();
             }
         }
+        
+        // 触发 BulletDefensePower
+        BulletDefensePower bulletDefensePower = (BulletDefensePower) player.getPower(BulletDefensePower.POWER_ID);
+        if (bulletDefensePower != null) {
+            for (int i = 0; i < times; i++) {
+                bulletDefensePower.onBulletConsumed();
+            }
+        }
 
     }
 }

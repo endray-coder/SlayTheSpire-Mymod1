@@ -72,7 +72,12 @@
   },
   "mymod:FanTheFlames": {
     "NAME": "煽风点火",
-    "DESCRIPTION": "使所有敌人的 mymod:燃烧 层数翻倍。 #y消耗 ",
+    "DESCRIPTION": "使所有敌人的 mymod:燃烧 层数翻倍。 NL 消耗 ",
     "UPGRADE_DESCRIPTION": "使所有敌人的 mymod:燃烧 层数翻倍。"
+  },
+  "mymod:BulletDefense": {
+    "NAME": "弹幕防御",
+    "DESCRIPTION": "获得 2 层弹幕防御。每消耗一颗子弹，获得 2 点格挡。",
+    "UPGRADE_DESCRIPTION": "获得 2 层弹幕防御。每消耗一颗子弹，获得 2 点格挡。"
   }
 }
