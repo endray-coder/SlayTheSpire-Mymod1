@@ -25,6 +25,7 @@ public class reload_relic extends CustomRelic {
     // 点击音效
     private static final LandingSound LANDING_SOUND = LandingSound.FLAT;
     private boolean bulletsAdded = false;
+    public static int bulletConsumedCount = 0;
     public reload_relic() {
         super(ID, ImageMaster.loadImage(IMG_PATH), RELIC_TIER, LANDING_SOUND);
         // 如果你需要轮廓图，取消注释下面一行并注释上面一行，不需要就删除
@@ -50,6 +51,12 @@ public class reload_relic extends CustomRelic {
     public void atBattleStart() {
         super.atBattleStart();
         bulletsAdded = false;
+        bulletConsumedCount = 0;
+    }
+    
+    // 静态方法，用于更新子弹消耗计数
+    public static void addBulletConsumed(int amount) {
+        bulletConsumedCount += amount;
     }
 
     @Override

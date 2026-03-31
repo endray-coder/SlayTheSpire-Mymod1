@@ -27,7 +27,11 @@
   },
   "mymod:PreyPower": {
     "NAME": "猎物",
-    "DESCRIPTIONS": ["失去 5 点力量。(不可叠加)"]
+    "DESCRIPTIONS": ["失去 5 点力量。"]
+  },
+  "mymod:HeartPower": {
+    "NAME": "心-天退星",
+    "DESCRIPTIONS": ["获得 5 点力量和 5 点敏捷(不可叠加)。回合开始时，本战斗中每消耗10颗 #y虎标弹 ，额外获得1力量和1敏捷。"]
   },
   "mymod:BulletDrawPower": {
     "NAME": "弹夹抽牌",

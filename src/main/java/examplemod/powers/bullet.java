@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import examplemod.powers.BulletDrawPower;
+import examplemod.relics.reload_relic;
 
 public class bullet extends AbstractPower {
     // 能力的ID
@@ -60,6 +61,9 @@ public class bullet extends AbstractPower {
             } else {
                 AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(player, player, bulletPower));
             }
+            
+            // 更新遗物的子弹消耗计数
+            reload_relic.addBulletConsumed(actualConsumed);
             
             // 触发子弹消耗效果
             triggerBulletConsumedEffects(player, actualConsumed);

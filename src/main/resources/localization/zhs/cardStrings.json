@@ -64,5 +64,10 @@
     "NAME": "快速装填",
     "DESCRIPTION": "每回合开始时获得 !M! 层 mymod:虎标弹 。",
     "UPGRADE_DESCRIPTION": "每回合开始时获得 !M! 层 mymod:虎标弹 。"
+  },
+  "mymod:Heart": {
+    "NAME": "心-天退星",
+    "DESCRIPTION": "获得 1 层 mymod:心-天退星 。",
+    "UPGRADE_DESCRIPTION": "获得 1 层 mymod:心-天退星 。"
   }
 }
