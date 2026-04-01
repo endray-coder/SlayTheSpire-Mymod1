@@ -9,7 +9,7 @@
   },
   {
     "NAMES": ["猎物"],
-    "DESCRIPTION": "失去 5 点力量。"
+    "DESCRIPTION": "失去 5 点力量。(不可叠加)"
   },
   {
     "NAMES": ["心-天退星"],
