@@ -27,7 +27,7 @@ public class HeavyStrike extends CustomCard {
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardColor COLOR = MyCharacter.PlayerColorEnum.EXAMPLE_GREEN;
     private static final CardRarity RARITY = CardRarity.RARE;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
 
     public HeavyStrike() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
@@ -49,39 +49,53 @@ public class HeavyStrike extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // 造成伤害
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(
-                m,
-                new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL),
-                AbstractGameAction.AttackEffect.SLASH_HORIZONTAL
-        ));
-        // 检查是否拥有足够的子弹，有则消耗并触发额外效果
-        int bulletsToConsume = 2;
-        int consumed = bullet.consumeBullets(p, bulletsToConsume); // 消耗最多2层子弹
-        if (consumed > 0) {
-            // 施加烧伤层数（使用magicNumber变量）
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
-                    m,
-                    p,
-                    new burn(m, this.magicNumber),
-                    this.magicNumber
-            ));
-            
-            // 触发额外效果：造成额外伤害
-            for(int i=0;i<consumed;i++) {
-                int extraDamage = this.upgraded ? 4 : 2;
-                int extraBurn=this.upgraded ? 4 : 2;
+        // 对所有敌人造成伤害并给予-3力量
+        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+            if (!monster.isDeadOrEscaped()) {
+                // 造成伤害
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(
-                        m,
-                        new DamageInfo(p, extraDamage, DamageInfo.DamageType.NORMAL),
-                        AbstractGameAction.AttackEffect.FIRE
+                        monster,
+                        new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL),
+                        AbstractGameAction.AttackEffect.SLASH_HORIZONTAL
                 ));
+                
+                // 给予敌人-3力量
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
-                        m,
+                        monster,
                         p,
-                        new burn(m, extraBurn),
-                        extraBurn
+                        new com.megacrit.cardcrawl.powers.StrengthPower(monster, -3),
+                        -3
                 ));
+                
+                // 检查是否拥有足够的子弹，有则消耗并触发额外效果
+                int bulletsToConsume = 2;
+                int consumed = bullet.consumeBullets(p, bulletsToConsume); // 消耗最多2层子弹
+                if (consumed > 0) {
+                    // 施加烧伤层数（使用magicNumber变量）
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                            monster,
+                            p,
+                            new burn(monster, this.magicNumber),
+                            this.magicNumber
+                    ));
+                    
+                    // 触发额外效果：造成额外伤害
+                    for(int i=0;i<consumed;i++) {
+                        int extraDamage = this.upgraded ? 4 : 2;
+                        int extraBurn=this.upgraded ? 4 : 2;
+                        AbstractDungeon.actionManager.addToBottom(new DamageAction(
+                                monster,
+                                new DamageInfo(p, extraDamage, DamageInfo.DamageType.NORMAL),
+                                AbstractGameAction.AttackEffect.FIRE
+                        ));
+                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                                monster,
+                                p,
+                                new burn(monster, extraBurn),
+                                extraBurn
+                        ));
+                    }
+                }
             }
         }
     }
