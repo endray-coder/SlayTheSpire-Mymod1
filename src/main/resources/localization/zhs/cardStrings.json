@@ -89,5 +89,10 @@
     "NAME": "提速",
     "DESCRIPTION": "抽 !M! 张牌，获得 !M! 点能量。 NL 消耗 ",
     "UPGRADE_DESCRIPTION": "抽 !M! 张牌，获得 !M! 点能量。 NL 消耗  "
+  },
+  "mymod:BulletRecycle": {
+    "NAME": "子弹回收",
+    "DESCRIPTION": "消耗最多 !M! 张牌，获得2点 [E] 。",
+    "UPGRADE_DESCRIPTION": "消耗最多 !M! 张牌，获得2点 [E] 。"
   }
 }
