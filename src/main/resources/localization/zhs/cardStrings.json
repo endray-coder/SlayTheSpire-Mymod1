@@ -15,20 +15,20 @@
     "UPGRADE_DESCRIPTION": "攻击敌人3次，每次造成 !D! 点伤害。消耗 2 层 mymod:虎标弹 ，施加 3 次 !M! 层 mymod:燃烧 ，每消耗1层子弹造成额外 4 点伤害并施加 2 层 mymod:燃烧 。"
   },
   "mymod:Defend": {
-    "NAME": "铁壁防御",
+    "NAME": "基础防御",
     "DESCRIPTION": "获得 !B! 点格挡。",
     "UPGRADE_DESCRIPTION": "获得 !B! 点格挡。"
   },
   "mymod:HeavyStrike": {
     "NAME": "重击",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害，并给予 -3 点力量。消耗最多2层 mymod:虎标弹 ，施加 !M! 层 mymod:燃烧 ，每消耗1层子弹造成额外 2 点伤害并施加 2 层 mymod:燃烧 。",
-    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害，并给予 -3 点力量。消耗最多2层 mymod:虎标弹 ，施加 !M! 层 mymod:燃烧 ，每消耗1层子弹造成额外 4 点伤害并施加 4 层 mymod:燃烧 。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害，并给予 *-3 点力量。消耗最多2层 mymod:虎标弹 ，施加 !M! 层 mymod:燃烧 ，每消耗1层子弹造成额外 2 点伤害并施加 2 层 mymod:燃烧 。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害，并给予 *-3 点力量。消耗最多2层 mymod:虎标弹 ，施加 !M! 层 mymod:燃烧 ，每消耗1层子弹造成额外 4 点伤害并施加 4 层 mymod:燃烧 。"
   }
   ,
   "mymod:QuickStrike": {
     "NAME": "快刀乱麻",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害3次。每次 !M!% 概率增加6点。消耗所有 mymod:虎标弹 ，对所有敌人施加相同层数的 mymod:燃烧 。使用后将 mymod:虎标弹 数量重置为 12。",
-    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害6次。每次 !M!% 概率增加6点。消耗所有 mymod:虎标弹 ，对所有敌人施加相同层数的 mymod:燃烧 。使用后将 mymod:虎标弹 数量重置为 12。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害3次。每次 !M!% 概率增加6点伤害。消耗所有 mymod:虎标弹 ，对所有敌人施加相同层数的 mymod:燃烧 。使用后将 mymod:虎标弹 数量重置为 12。 NL 结束你的回合 ",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害6次。每次 !M!% 概率增加6点伤害。消耗所有 mymod:虎标弹 ，对所有敌人施加相同层数的 mymod:燃烧 。使用后将 mymod:虎标弹 数量重置为 12。 NL 结束你的回合 "
   },
   "mymod:Reloading1": {
     "NAME": "装填",
@@ -52,8 +52,8 @@
   },
   "mymod:ReloadStrike": {
     "NAME": "天退星：装填",
-    "DESCRIPTION": "造成 !D! 点伤害，将 mymod:虎标弹 数量重置为 12，结束回合。 NL 消耗 ",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，将 mymod:虎标弹 数量重置为 12，结束回合。 NL 消耗 "
+    "DESCRIPTION": "造成 !D! 点伤害，将 mymod:虎标弹 数量重置为 8，结束回合。 NL 消耗 ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，将 mymod:虎标弹 数量重置为 8，结束回合。 NL 消耗 "
   },
   "mymod:PreyCard": {
     "NAME": "标记猎物",
@@ -94,5 +94,15 @@
     "NAME": "子弹回收",
     "DESCRIPTION": "消耗最多 !M! 张牌，获得2点 [E] 。",
     "UPGRADE_DESCRIPTION": "消耗最多 !M! 张牌，获得2点 [E] 。"
+  },
+  "mymod:ArmorPiercingShot": {
+    "NAME": "破甲射击",
+    "DESCRIPTION": "造成 !D! 点伤害，消耗 1 颗 mymod:虎标弹 ，给予敌人 !M! 层虚弱和 !M! 层易伤。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，消耗 1 颗 mymod:虎标弹 ，给予敌人 !M! 层虚弱和 !M! 层易伤。"
+  },
+  "mymod:ShieldWall": {
+    "NAME": "铁壁防线",
+    "DESCRIPTION": "获得 !B! 点格挡。消耗 1 颗 mymod:虎标弹 ，获得额外 !M! 点格挡。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡。消耗 1 颗 mymod:虎标弹 ，获得额外 !M! 点格挡。"
   }
 }

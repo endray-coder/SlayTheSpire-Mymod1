@@ -3,6 +3,7 @@ package examplemod.cards;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -128,6 +129,9 @@ public class QuickStrike extends CustomCard {
        // this.baseDamage = backupBaseDamage + 1;
         this.baseDamage = backupBaseDamage ;
         this.damage = this.baseDamage;
+
+        // 结束回合
+        this.addToBot(new PressEndTurnButtonAction());
     }
 
 
