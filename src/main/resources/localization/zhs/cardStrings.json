@@ -1,8 +1,8 @@
 {
   "mymod:Strike": {
     "NAME": "快机乱麻",
-    "DESCRIPTION": "造成 !D! 点伤害3次。每次增加6点",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害5次。每次增加6点"
+    "DESCRIPTION": "造成 !D! 点伤害",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害"
   },
   "mymod:shoot1": {
     "NAME": "双重射击",
@@ -26,12 +26,12 @@
   }
   ,
   "mymod:QuickStrike": {
-    "NAME": "快机乱麻",
-    "DESCRIPTION": "造成 !D! 点伤害3次。每次 !M!% 概率增加6点。消耗所有 mymod:虎标弹 ，对所有敌人施加相同层数的 mymod:燃烧 。使用后将 mymod:虎标弹 数量重置为 12。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害5次。每次 !M!% 概率增加6点。消耗所有 mymod:虎标弹 ，对所有敌人施加相同层数的 mymod:燃烧 。使用后将 mymod:虎标弹 数量重置为 12。"
+    "NAME": "快刀乱麻",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害3次。每次 !M!% 概率增加6点。消耗所有 mymod:虎标弹 ，对所有敌人施加相同层数的 mymod:燃烧 。使用后将 mymod:虎标弹 数量重置为 12。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害6次。每次 !M!% 概率增加6点。消耗所有 mymod:虎标弹 ，对所有敌人施加相同层数的 mymod:燃烧 。使用后将 mymod:虎标弹 数量重置为 12。"
   },
   "mymod:Reloading1": {
-    "NAME": "测试子弹能力",
+    "NAME": "装填",
     "DESCRIPTION": "获得 !M! 层 mymod:虎标弹 ",
     "UPGRADE_DESCRIPTION": "获得 !M! 层 mymod:虎标弹 "
   },
@@ -52,8 +52,8 @@
   },
   "mymod:ReloadStrike": {
     "NAME": "天退星：装填",
-    "DESCRIPTION": "造成 !D! 点伤害，将 mymod:虎标弹 数量重置为 12，结束回合。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，将 mymod:虎标弹 数量重置为 12，结束回合。"
+    "DESCRIPTION": "造成 !D! 点伤害，将 mymod:虎标弹 数量重置为 12，结束回合。 NL 消耗 ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，将 mymod:虎标弹 数量重置为 12，结束回合。 NL 消耗 "
   },
   "mymod:PreyCard": {
     "NAME": "标记猎物",

@@ -11,3 +11,7 @@ this.addToBot(new DrawCardAction(p, this.magicNumber));
 this.addToBot(new LoseHPAction(p, p, 6));
 ## 获得能量
 this.addToBot(new GainEnergyAction(2));
+
+# 净化
+是否随机，任意数字，canPickZero
+this.addToBot(new ExhaustAction(this.magicNumber, false, true, true));

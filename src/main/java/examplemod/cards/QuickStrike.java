@@ -33,6 +33,7 @@ public class QuickStrike extends CustomCard {
     private int atktime =3;
     public QuickStrike() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+
         this.baseDamage = this.damage =3;
         // 使用baseMagicNumber存储概率值（百分比形式）
         this.baseMagicNumber = this.magicNumber = (int)(rate * 100);
@@ -45,8 +46,8 @@ public class QuickStrike extends CustomCard {
         if (!this.upgraded) {
             this.upgradeName(); // 卡牌名字变为绿色并添加“+”，且标为升级过的卡牌，之后不能再升级。
            // this.upgradeDamage(3); // 将该卡牌的伤害提高3点。
-            this.atktime =5;
-            this.name="超绝猛机杀击乱斩";
+            this.atktime =6;
+            this.name="超绝猛虎杀击乱斩";
             this.rawDescription = UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }
