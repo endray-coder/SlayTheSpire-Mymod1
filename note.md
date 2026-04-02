@@ -15,3 +15,6 @@ this.addToBot(new GainEnergyAction(2));
 # 净化
 是否随机，任意数字，canPickZero
 this.addToBot(new ExhaustAction(this.magicNumber, false, true, true));
+
+# 虚无
+this.isEthereal = true;
