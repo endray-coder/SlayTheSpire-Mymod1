@@ -130,6 +130,14 @@ public class QuickStrike extends CustomCard {
         this.baseDamage = backupBaseDamage ;
         this.damage = this.baseDamage;
 
+        // 给自己两层虚弱
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                p,
+                p,
+                new com.megacrit.cardcrawl.powers.WeakPower(p, 2, false),
+                2
+        ));
+        
         // 结束回合
         this.addToBot(new PressEndTurnButtonAction());
     }
