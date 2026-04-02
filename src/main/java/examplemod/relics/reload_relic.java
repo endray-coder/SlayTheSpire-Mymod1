@@ -93,8 +93,8 @@ public class reload_relic extends CustomRelic {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
                         AbstractDungeon.player,
                         AbstractDungeon.player,
-                        new StrengthPower(AbstractDungeon.player, -2),
-                        -2
+                        new StrengthPower(AbstractDungeon.player, -3),
+                        -3
                 ));
                 // 添加overheat能力作为标志
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
@@ -122,8 +122,8 @@ public class reload_relic extends CustomRelic {
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
                             AbstractDungeon.player,
                             AbstractDungeon.player,
-                            new StrengthPower(AbstractDungeon.player, 2),
-                            2
+                            new StrengthPower(AbstractDungeon.player, 3),
+                            3
                     ));
                 }
                 // 移除overheat能力标志

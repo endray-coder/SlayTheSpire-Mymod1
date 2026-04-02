@@ -27,8 +27,8 @@
   ,
   "mymod:QuickStrike": {
     "NAME": "快刀乱麻",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害3次。每次 !M!% 概率增加6点伤害。消耗所有 mymod:虎标弹 ，对所有敌人施加相同层数的 mymod:燃烧 。使用后将 mymod:虎标弹 数量重置为 12。 NL 结束你的回合 ",
-    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害6次。每次 !M!% 概率增加6点伤害。消耗所有 mymod:虎标弹 ，对所有敌人施加相同层数的 mymod:燃烧 。使用后将 mymod:虎标弹 数量重置为 12。 NL 结束你的回合 "
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害3次。每次 !M!% 概率增加6点伤害。消耗所有 mymod:虎标弹 ，对所有敌人施加相同层数的 mymod:燃烧 。使用后将 mymod:虎标弹 数量重置为 8。 NL 结束你的回合 ",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害6次。每次 !M!% 概率增加6点伤害。消耗所有 mymod:虎标弹 ，对所有敌人施加相同层数的 mymod:燃烧 。使用后将 mymod:虎标弹 数量重置为 8。 NL 结束你的回合 "
   },
   "mymod:Reloading1": {
     "NAME": "装填",
@@ -109,5 +109,10 @@
     "NAME": "连续射击",
     "DESCRIPTION": "消耗最多 6 颗子弹，然后失去所有子弹。每当消耗 1 颗子弹，随机对一个敌人造成 !D! 点伤害并施加 !M! 层燃烧。",
     "UPGRADE_DESCRIPTION": "消耗最多 6 颗子弹，然后失去所有子弹。每当消耗 1 颗子弹，随机对一个敌人造成 !D! 点伤害并施加 !M! 层燃烧。"
+  },
+  "mymod:BattleFrenzy": {
+    "NAME": "临战凶煞",
+    "DESCRIPTION": "获得 2 点力量，对所有敌人施加 !M! 层虚弱。",
+    "UPGRADE_DESCRIPTION": "获得 3 点力量，对所有敌人施加 !M! 层虚弱。"
   }
 }
