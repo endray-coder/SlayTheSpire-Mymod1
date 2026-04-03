@@ -1,4 +1,4 @@
-
+Savage Tigerslayer's Perfected Flurry of Blades
 # 燃烧契约（burningpact）的消耗
 this.addToBot(new ExhaustAction(1, false));
 第二个参数是是否可以选择“零个”

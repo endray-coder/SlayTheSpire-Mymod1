@@ -3,7 +3,6 @@ package examplemod.cards;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -16,8 +15,8 @@ import examplemod.powers.bullet;
 import examplemod.powers.burn;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 
-public class QuickStrike extends CustomCard {
-    public static final String ID = "mymod:QuickStrike";
+public class SuperTigerStrike extends CustomCard {
+    public static final String ID = "mymod:SuperTigerStrike";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = cardStrings.NAME;
     private static final String IMG_PATH = "img/cards/Strike.png";
@@ -26,39 +25,28 @@ public class QuickStrike extends CustomCard {
     private static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardColor COLOR = MyCharacter.PlayerColorEnum.EXAMPLE_GREEN;
-    //private static final CardColor COLOR =CardColor.COLORLESS;
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     public static final double rate=0.7;
 
-    private int atktime =3;
-    public QuickStrike() {
+    private int atktime =6;
+    public SuperTigerStrike() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 
         this.baseDamage = this.damage =3;
         // 使用baseMagicNumber存储概率值（百分比形式）
         this.baseMagicNumber = this.magicNumber = (int)(rate * 100);
-        this.exhaust = true; // 消耗
-        this.tags.add(CardTags.STARTER_STRIKE);
-        this.tags.add(CardTags.STRIKE);
     }
 
     @Override
-    public void upgrade() { // 升级调用的方法
+    public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName(); // 卡牌名字变为绿色并添加“+”，且标为升级过的卡牌，之后不能再升级。
-            this.upgradeBaseCost(2); // 升级后费用从3减到2
             this.rawDescription = UPGRADE_DESCRIPTION;
+            this.upgradeBaseCost(2); // 升级后费用从3减到2
             this.initializeDescription();
         }
     }
-
-    /**
-     * 当卡牌被使用时，调用这个方法。
-     *
-     * @param p 你的玩家实体类。
-     * @param m 指向的怪物类。（无指向时为null，包括攻击所有敌人时）
-     */
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -89,15 +77,13 @@ public class QuickStrike extends CustomCard {
                     );
                 }
             }
-
-
         }
 
         // 消耗所有子弹并给予同样层数的燃烧
         bullet bulletPower = (bullet) p.getPower(bullet.POWER_ID);
         if (bulletPower != null && bulletPower.amount > 0) {
             int bulletCount = bulletPower.amount;
-            int extraburn=this.upgraded?2:1;
+            int extraburn=2;
             // 消耗所有子弹
             bullet.consumeBullets(p, bulletCount);
             // 对所有敌人施加燃烧效果
@@ -116,41 +102,17 @@ public class QuickStrike extends CustomCard {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
                     p,
                     p,
-                    new bullet(p, 12),
-                    12
+                    new bullet(p, 8),
+                    8
             ));
-
 
         // 更新魔法值（概率）
         this.baseMagicNumber = (int)(rate * 100);
         this.magicNumber = this.baseMagicNumber;
-        //当时测试用，本来这张卡是造成伤害成等差数列上升用的，后面想了想干脆搞成超绝猛虎杀鸡乱斩得了
-       // this.baseDamage = backupBaseDamage + 1;
         this.baseDamage = backupBaseDamage ;
         this.damage = this.baseDamage;
-
-        // 给自己两层虚弱
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
-                p,
-                p,
-                new com.megacrit.cardcrawl.powers.WeakPower(p, 2, false),
-                2
-        ));
-        SuperTigerStrike superTigerStrike = new SuperTigerStrike();
-        if (this.upgraded) {
-            superTigerStrike.upgrade();
-        }
-        // 获得超绝猛虎杀击乱斩
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction(
-               superTigerStrike,
-                1,
-                false
-        ));
         
         // 结束回合
-        this.addToBot(new PressEndTurnButtonAction());
+        this.addToBot(new com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction());
     }
-
-
-
 }
