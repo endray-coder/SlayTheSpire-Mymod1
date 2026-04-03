@@ -14,7 +14,7 @@
   "mymod:overheat": {
     "NAME": "过热",
     "DESCRIPTIONS": [
-      "获得+3敏捷并-2力量。回合开始时若有子弹，则失去该效果"
+      "获得+3敏捷并-3力量。回合开始时若有子弹，则失去该效果"
     ]
   },
   "mymod:ReloadingPower": {
