@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.audio.SoundMaster;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -62,7 +63,7 @@ public class MyCharacter extends CustomPlayer {
 
         // 初始化你的人物，如果你的人物只有一张图，那么第一个参数填写你人物图片的路径。
         this.initializeClass(
-                "img/char/character.png", // 人物图片
+                "img/char/LeiHeng.png", // 人物图片
                 MY_CHARACTER_SHOULDER_2, MY_CHARACTER_SHOULDER_1,
                 CORPSE_IMAGE, // 人物死亡图像
                 this.getLoadout(),
@@ -88,9 +89,9 @@ public class MyCharacter extends CustomPlayer {
             retVal.add(Strike.ID);
             retVal.add("mymod:Defend");
         }
-        retVal.add("mymod:QuickStrike");
+//        retVal.add("mymod:QuickStrike");
         retVal.add("mymod:shoot1");
-        retVal.add("mymod:Reloading1");
+//        retVal.add("mymod:Reloading1");
         return retVal;
     }
 
@@ -160,6 +161,7 @@ public class MyCharacter extends CustomPlayer {
     @Override
     public void doCharSelectScreenSelectEffect() {
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.MED, ScreenShake.ShakeDur.SHORT, false);
+        CardCrawlGame.sound.playA("opening", 0.0F);
     }
 
     // 碎心图片

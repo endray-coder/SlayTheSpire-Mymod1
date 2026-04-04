@@ -1,16 +1,16 @@
 {
   "mymod:diejia": {
-    "NAME": "测试遗物",
+    "NAME": "甲来！",
     "FLAVOR": "这个人很懒，什么都没写",
     "DESCRIPTIONS": [
       "战斗开始时，获得壁垒buff"
     ]
   },
   "mymod:reload_relic": {
-    "NAME": "测试遗物",
+    "NAME": "天退星刀",
     "FLAVOR": "这个人很懒，什么都没写",
     "DESCRIPTIONS": [
-      "战斗开始时，获得虎标弹"
+      "战斗开始时，获得12颗虎标弹"
     ]
   }
 }

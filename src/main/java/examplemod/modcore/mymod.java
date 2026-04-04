@@ -20,7 +20,7 @@ import java.nio.charset.StandardCharsets;
 import static examplemod.character.MyCharacter.PlayerColorEnum.EXAMPLE_GREEN;
 
 @SpireInitializer
-public class mymod implements EditCardsSubscriber, EditCharactersSubscriber, EditStringsSubscriber, EditRelicsSubscriber , EditKeywordsSubscriber {
+public class mymod implements EditCardsSubscriber, EditCharactersSubscriber, EditStringsSubscriber, EditRelicsSubscriber , EditKeywordsSubscriber,AddAudioSubscriber {
     private static final String MY_CHARACTER_BUTTON = "img/char/Character_Button.png";
     private static final String MY_CHARACTER_PORTRAIT = "img/char/Character_Portrait.png";
     private static final String BG_ATTACK_512 = "img/512/bg_attack_512.png";
@@ -104,5 +104,8 @@ public class mymod implements EditCardsSubscriber, EditCharactersSubscriber, Edi
             }
         }
 
+    }
+    public void receiveAddAudio() {
+        BaseMod.addAudio("opening", "audio/opening.ogg");
     }
 }
