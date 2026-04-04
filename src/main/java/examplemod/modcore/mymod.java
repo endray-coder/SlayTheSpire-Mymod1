@@ -66,7 +66,7 @@ public class mymod implements EditCardsSubscriber, EditCharactersSubscriber, Edi
         // 添加角色
         BaseMod.addCharacter(new MyCharacter(MyCharacter.PlayerColorEnum.MY_CHARACTER.name()),
                 "img/char/Character_Button.png",
-                "img/char/Character_Portrait.png",
+                "img/char/portrait2.png",
                 MyCharacter.PlayerColorEnum.MY_CHARACTER);
     }
 
