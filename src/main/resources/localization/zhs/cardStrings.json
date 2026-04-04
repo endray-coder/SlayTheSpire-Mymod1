@@ -46,7 +46,7 @@
   "UPGRADE_DESCRIPTION": "抽 !M! 张牌,消耗 1 层 mymod:虎标弹 ，重复一次"
   },
   "mymod:BulletDraw": {
-    "NAME": "弹夹抽牌",
+    "NAME": "换膛续击",
     "DESCRIPTION": "每当你消耗一颗子弹，抽 !M! 张牌。",
     "UPGRADE_DESCRIPTION": "每当你消耗一颗子弹，抽 !M! 张牌。"
   },
