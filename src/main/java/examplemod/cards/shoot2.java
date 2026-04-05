@@ -16,7 +16,7 @@ import examplemod.powers.burn;
 import examplemod.powers.bullet;
 
 public class shoot2 extends CustomCard {
-    public static final String ID = "Leiheng:shoot2";
+    public static final String ID = "leiheng:shoot2";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = cardStrings.NAME;
     private static final String IMG_PATH = "img/cards/Strike.png";

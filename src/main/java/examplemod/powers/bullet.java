@@ -15,7 +15,7 @@ import examplemod.relics.reload_relic;
 
 public class bullet extends AbstractPower {
     // 能力的ID
-    public static final String POWER_ID = "Leiheng:bullet";
+    public static final String POWER_ID = "leiheng:bullet";
     // 能力的本地化字段
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     // 能力的名称

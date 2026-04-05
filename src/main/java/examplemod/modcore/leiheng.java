@@ -18,7 +18,7 @@ import java.nio.charset.StandardCharsets;
 import static examplemod.character.MyCharacter.PlayerColorEnum.EXAMPLE_GREEN;
 
 @SpireInitializer
-public class Leiheng implements EditCardsSubscriber, EditCharactersSubscriber, EditStringsSubscriber, EditRelicsSubscriber , EditKeywordsSubscriber,AddAudioSubscriber {
+public class leiheng implements EditCardsSubscriber, EditCharactersSubscriber, EditStringsSubscriber, EditRelicsSubscriber , EditKeywordsSubscriber,AddAudioSubscriber {
     private static final String MY_CHARACTER_BUTTON = "img/char/Character_Button.png";
     private static final String MY_CHARACTER_PORTRAIT = "img/char/Character_Portrait.png";
     private static final String BG_ATTACK_512 = "img/512/bg_attack_512.png";
@@ -33,7 +33,7 @@ public class Leiheng implements EditCardsSubscriber, EditCharactersSubscriber, E
 
     public static final Color MY_COLOR = new Color(27.0F / 255.0F, 120.0F / 255.0F, 120.0F / 255.0F, 1.0F);
 
-    public Leiheng() {
+    public leiheng() {
         BaseMod.addColor(EXAMPLE_GREEN, MY_COLOR, MY_COLOR, MY_COLOR,
                 MY_COLOR, MY_COLOR, MY_COLOR, MY_COLOR, BG_ATTACK_512,
                 BG_SKILL_512, BG_POWER_512, energy_orb, BG_ATTACK_1024,
@@ -43,12 +43,12 @@ public class Leiheng implements EditCardsSubscriber, EditCharactersSubscriber, E
     }
 
     public static void initialize() {
-        new Leiheng();
+        new leiheng();
     }
 
     @Override
     public void receiveEditCards() {
-        AutoAdd cards = new AutoAdd("Leiheng");
+        AutoAdd cards = new AutoAdd("leiheng");
         cards.packageFilter("examplemod.cards").setDefaultSeen(false).any(basemod.abstracts.CustomCard.class, (info, card) -> {
             if (card != null) {
                 BaseMod.addCard(card);
@@ -97,7 +97,7 @@ public class Leiheng implements EditCardsSubscriber, EditCharactersSubscriber, E
         if (keywords != null) {
             for (Keyword keyword : keywords) {
                 // 这个id要全小写
-                BaseMod.addKeyword("Leiheng", keyword.NAMES[0], keyword.NAMES, keyword.DESCRIPTION);
+                BaseMod.addKeyword("leiheng", keyword.NAMES[0], keyword.NAMES, keyword.DESCRIPTION);
                 System.out.println("关键词注册成功：" + keyword.NAMES[0]);
             }
         }
@@ -105,5 +105,7 @@ public class Leiheng implements EditCardsSubscriber, EditCharactersSubscriber, E
     }
     public void receiveAddAudio() {
         BaseMod.addAudio("opening", "audio/opening.ogg");
+        BaseMod.addAudio("quickstrike", "audio/quickstrike.ogg.ogg");
+        BaseMod.addAudio("supertigerstrike", "audio/Tiger.ogg.ogg");
     }
 }

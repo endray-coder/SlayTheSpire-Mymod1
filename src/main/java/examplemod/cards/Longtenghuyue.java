@@ -14,7 +14,7 @@ import examplemod.powers.burn;
 
 // 在examplemod.cards包下创建Defend.java
 public class Longtenghuyue extends CustomCard {
-    public static final String ID = "Leiheng:Longtenghuyue";
+    public static final String ID = "leiheng:Longtenghuyue";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = cardStrings.NAME;
     private static final String IMG_PATH = "img/cards/Strike.png";

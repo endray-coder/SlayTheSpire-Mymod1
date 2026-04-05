@@ -10,7 +10,7 @@ import examplemod.character.MyCharacter;
 
 // 在examplemod.cards包下创建Defend.java
 public class Defendx3 extends CustomCard {
-    public static final String ID = "Leiheng:Defendx3";
+    public static final String ID = "leiheng:Defendx3";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = cardStrings.NAME;
     private static final String IMG_PATH = "img/cards/Strike.png";

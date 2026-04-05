@@ -16,7 +16,7 @@ import examplemod.powers.burn;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 
 public class SuperTigerStrike extends CustomCard {
-    public static final String ID = "Leiheng:SuperTigerStrike";
+    public static final String ID = "leiheng:SuperTigerStrike";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = cardStrings.NAME;
     private static final String IMG_PATH = "img/cards/Strike.png";
@@ -50,6 +50,9 @@ public class SuperTigerStrike extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        // 播放音频
+        CardCrawlGame.sound.playA("supertigerstrike", 0.0F);
+        
         // 备份当前基础伤害（用于循环结束后，只保留1点战斗内成长）
         int backupBaseDamage = this.baseDamage;
 

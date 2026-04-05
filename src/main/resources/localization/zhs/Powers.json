@@ -1,23 +1,23 @@
 {
-  "Leiheng:bullet": {
+  "leiheng:bullet": {
     "NAME": "虎标弹",
     "DESCRIPTIONS": [
       "拥有","虎标弹"
     ]
   },
-  "Leiheng:burn": {
+  "leiheng:burn": {
     "NAME": "燃烧",
     "DESCRIPTIONS": [
       "回合结束受到","点伤害并变为原本的2/3（向下取整）"
     ]
   },
-  "Leiheng:overheat": {
+  "leiheng:overheat": {
     "NAME": "过热",
     "DESCRIPTIONS": [
       "获得+3敏捷并-3力量。回合开始时若有子弹，则失去该效果"
     ]
   },
-  "Leiheng:ReloadingPower": {
+  "leiheng:ReloadingPower": {
     "NAME": "子弹装填",
     "DESCRIPTIONS": [
       "每回合开始时获得 #b",
@@ -25,15 +25,15 @@
       " 层虎标弹。"
     ]
   },
-  "Leiheng:PreyPower": {
+  "leiheng:PreyPower": {
     "NAME": "猎物",
     "DESCRIPTIONS": ["失去 5 点力量。"]
   },
-  "Leiheng:HeartPower": {
+  "leiheng:HeartPower": {
     "NAME": "心-天退星",
     "DESCRIPTIONS": ["获得 5 点力量和 5 点敏捷(不可叠加)。回合开始时，本战斗中每消耗10颗 #y虎标弹 ，额外获得1力量和1敏捷。"]
   },
-  "Leiheng:BulletDrawPower": {
+  "leiheng:BulletDrawPower": {
     "NAME": "弹夹抽牌",
     "DESCRIPTIONS": [
       "每当你消耗一颗子弹，抽 #b",
@@ -41,7 +41,7 @@
       " 张牌。"
     ]
   },
-  "Leiheng:BulletDefensePower": {
+  "leiheng:BulletDefensePower": {
     "NAME": "弹幕防御",
     "DESCRIPTIONS": ["每消耗一颗子弹，获得 #b" , "点格挡。"]
   }
