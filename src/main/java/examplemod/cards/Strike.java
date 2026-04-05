@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import examplemod.character.MyCharacter;
 
 public class Strike extends CustomCard {
-    public static final String ID = "mymod:Strike";
+    public static final String ID = "Leiheng:Strike";
     private static final String NAME = "打击";
     private static final String IMG_PATH = "img/cards/Strike.png";
     private static final int COST = 1;

@@ -17,7 +17,7 @@ import examplemod.powers.burn;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 
 public class QuickStrike extends CustomCard {
-    public static final String ID = "mymod:QuickStrike";
+    public static final String ID = "Leiheng:QuickStrike";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = cardStrings.NAME;
     private static final String IMG_PATH = "img/cards/Strike.png";

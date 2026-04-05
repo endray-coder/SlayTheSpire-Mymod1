@@ -16,7 +16,7 @@ import examplemod.powers.burn;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 
 public class SuperTigerStrike extends CustomCard {
-    public static final String ID = "mymod:SuperTigerStrike";
+    public static final String ID = "Leiheng:SuperTigerStrike";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = cardStrings.NAME;
     private static final String IMG_PATH = "img/cards/Strike.png";

@@ -1,7 +1,6 @@
 package examplemod.modcore;
 import basemod.AutoAdd;
 import basemod.BaseMod;
-import basemod.abstracts.CustomCard;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -9,7 +8,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import examplemod.cards.*;
 import examplemod.character.MyCharacter;
 import com.badlogic.gdx.graphics.Color;
 import examplemod.relics.diejia;
@@ -20,7 +18,7 @@ import java.nio.charset.StandardCharsets;
 import static examplemod.character.MyCharacter.PlayerColorEnum.EXAMPLE_GREEN;
 
 @SpireInitializer
-public class mymod implements EditCardsSubscriber, EditCharactersSubscriber, EditStringsSubscriber, EditRelicsSubscriber , EditKeywordsSubscriber,AddAudioSubscriber {
+public class Leiheng implements EditCardsSubscriber, EditCharactersSubscriber, EditStringsSubscriber, EditRelicsSubscriber , EditKeywordsSubscriber,AddAudioSubscriber {
     private static final String MY_CHARACTER_BUTTON = "img/char/Character_Button.png";
     private static final String MY_CHARACTER_PORTRAIT = "img/char/Character_Portrait.png";
     private static final String BG_ATTACK_512 = "img/512/bg_attack_512.png";
@@ -35,7 +33,7 @@ public class mymod implements EditCardsSubscriber, EditCharactersSubscriber, Edi
 
     public static final Color MY_COLOR = new Color(27.0F / 255.0F, 120.0F / 255.0F, 120.0F / 255.0F, 1.0F);
 
-    public mymod() {
+    public Leiheng() {
         BaseMod.addColor(EXAMPLE_GREEN, MY_COLOR, MY_COLOR, MY_COLOR,
                 MY_COLOR, MY_COLOR, MY_COLOR, MY_COLOR, BG_ATTACK_512,
                 BG_SKILL_512, BG_POWER_512, energy_orb, BG_ATTACK_1024,
@@ -45,12 +43,12 @@ public class mymod implements EditCardsSubscriber, EditCharactersSubscriber, Edi
     }
 
     public static void initialize() {
-        new mymod();
+        new Leiheng();
     }
 
     @Override
     public void receiveEditCards() {
-        AutoAdd cards = new AutoAdd("mymod");
+        AutoAdd cards = new AutoAdd("Leiheng");
         cards.packageFilter("examplemod.cards").setDefaultSeen(false).any(basemod.abstracts.CustomCard.class, (info, card) -> {
             if (card != null) {
                 BaseMod.addCard(card);
@@ -99,7 +97,7 @@ public class mymod implements EditCardsSubscriber, EditCharactersSubscriber, Edi
         if (keywords != null) {
             for (Keyword keyword : keywords) {
                 // 这个id要全小写
-                BaseMod.addKeyword("mymod", keyword.NAMES[0], keyword.NAMES, keyword.DESCRIPTION);
+                BaseMod.addKeyword("Leiheng", keyword.NAMES[0], keyword.NAMES, keyword.DESCRIPTION);
                 System.out.println("关键词注册成功：" + keyword.NAMES[0]);
             }
         }

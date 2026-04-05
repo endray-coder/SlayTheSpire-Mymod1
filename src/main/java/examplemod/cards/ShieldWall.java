@@ -11,7 +11,7 @@ import examplemod.character.MyCharacter;
 import examplemod.powers.bullet;
 
 public class ShieldWall extends CustomCard {
-    public static final String ID = "mymod:ShieldWall";
+    public static final String ID = "Leiheng:ShieldWall";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = cardStrings.NAME;
     private static final String IMG_PATH = "img/cards/Strike.png";

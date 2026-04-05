@@ -17,7 +17,7 @@ import examplemod.powers.burn;
 import java.util.Random;
 
 public class RapidFire extends CustomCard {
-    public static final String ID = "mymod:RapidFire";
+    public static final String ID = "Leiheng:RapidFire";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = cardStrings.NAME;
     private static final String IMG_PATH = "img/cards/Strike.png";

@@ -12,7 +12,7 @@ import examplemod.powers.HeartPower;
 import examplemod.powers.bullet;
 
 public class Heart extends CustomCard {
-    public static final String ID = "mymod:Heart";
+    public static final String ID = "Leiheng:Heart";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = cardStrings.NAME;
     private static final String IMG_PATH = "img/cards/Strike.png";

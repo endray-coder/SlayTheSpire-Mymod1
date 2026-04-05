@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class overheat extends AbstractPower {
     // 能力的ID
-    public static final String POWER_ID = "mymod:overheat";
+    public static final String POWER_ID = "Leiheng:overheat";
     // 能力的本地化字段
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     // 能力的名称

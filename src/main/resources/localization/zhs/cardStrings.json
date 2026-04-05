@@ -1,128 +1,128 @@
 {
-  "mymod:Strike": {
+  "Leiheng:Strike": {
     "NAME": "快机乱麻",
     "DESCRIPTION": "造成 !D! 点伤害",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害"
   },
-  "mymod:shoot1": {
+  "Leiheng:shoot1": {
     "NAME": "双重射击",
-    "DESCRIPTION": "攻击敌人2次，每次造成 !D! 点伤害。消耗 1 层 mymod:虎标弹 ，造成额外 2 点伤害并施加 !M! 层 mymod:燃烧 .",
-    "UPGRADE_DESCRIPTION": "攻击敌人2次，每次造成 !D! 点伤害。消耗 1 层 mymod:虎标弹 ，造成额外 3 点伤害并施加 !M! 层 mymod:燃烧 ."
+    "DESCRIPTION": "攻击敌人2次，每次造成 !D! 点伤害。消耗 1 层 Leiheng:虎标弹 ，造成额外 2 点伤害并施加 !M! 层 Leiheng:燃烧 .",
+    "UPGRADE_DESCRIPTION": "攻击敌人2次，每次造成 !D! 点伤害。消耗 1 层 Leiheng:虎标弹 ，造成额外 3 点伤害并施加 !M! 层 Leiheng:燃烧 ."
   },
-  "mymod:shoot2": {
+  "Leiheng:shoot2": {
     "NAME": "三重射击",
-    "DESCRIPTION": "攻击敌人3次，每次造成 !D! 点伤害。消耗 2 层 mymod:虎标弹 ，施加 3 次 !M! 层 mymod:燃烧 ，每消耗1层子弹造成额外 2 点伤害并施加 2 层 mymod:燃烧 。",
-    "UPGRADE_DESCRIPTION": "攻击敌人3次，每次造成 !D! 点伤害。消耗 2 层 mymod:虎标弹 ，施加 3 次 !M! 层 mymod:燃烧 ，每消耗1层子弹造成额外 4 点伤害并施加 2 层 mymod:燃烧 。"
+    "DESCRIPTION": "攻击敌人3次，每次造成 !D! 点伤害。消耗 2 层 Leiheng:虎标弹 ，施加 3 次 !M! 层 Leiheng:燃烧 ，每消耗1层子弹造成额外 2 点伤害并施加 2 层 Leiheng:燃烧 。",
+    "UPGRADE_DESCRIPTION": "攻击敌人3次，每次造成 !D! 点伤害。消耗 2 层 Leiheng:虎标弹 ，施加 3 次 !M! 层 Leiheng:燃烧 ，每消耗1层子弹造成额外 4 点伤害并施加 2 层 Leiheng:燃烧 。"
   },
-  "mymod:Defend": {
+  "Leiheng:Defend": {
     "NAME": "基础防御",
     "DESCRIPTION": "获得 !B! 点格挡。",
     "UPGRADE_DESCRIPTION": "获得 !B! 点格挡。"
   },
-  "mymod:HeavyStrike": {
+  "Leiheng:HeavyStrike": {
     "NAME": "重击",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害，并给予 -3 点力量。施加 !M! 层 mymod:燃烧 ，消耗最多2层 mymod:虎标弹 ，每消耗1层子弹造成额外 2 点伤害并施加 2 层 mymod:燃烧 。",
-    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害，并给予 -3 点力量。施加 !M! 层 mymod:燃烧 ，消耗最多2层 mymod:虎标弹 ，每消耗1层子弹造成额外 4 点伤害并施加 4 层 mymod:燃烧 。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害，并给予 -3 点力量。施加 !M! 层 Leiheng:燃烧 ，消耗最多2层 Leiheng:虎标弹 ，每消耗1层子弹造成额外 2 点伤害并施加 2 层 Leiheng:燃烧 。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害，并给予 -3 点力量。施加 !M! 层 Leiheng:燃烧 ，消耗最多2层 Leiheng:虎标弹 ，每消耗1层子弹造成额外 4 点伤害并施加 4 层 Leiheng:燃烧 。"
   }
   ,
-  "mymod:QuickStrike": {
+  "Leiheng:QuickStrike": {
     "NAME": "快刀乱麻",
-    "DESCRIPTION": " 消耗 。对所有敌人造成 !D! 点伤害3次。每次 !M!% 概率增加6点伤害。消耗所有 mymod:虎标弹 ，对所有敌人施加相同层数的 mymod:燃烧 。使用后将 mymod:虎标弹 数量重置为 8，获得 2 层虚弱，获得一张 *超绝猛虎杀击乱斩 。 NL 结束你的回合 ",
-    "UPGRADE_DESCRIPTION": " 消耗 。对所有敌人造成 !D! 点伤害3次。每次 !M!% 概率增加6点伤害。消耗所有 mymod:虎标弹 ，对所有敌人施加相同层数的 mymod:燃烧 。使用后将 mymod:虎标弹 数量重置为 8，获得 2 层虚弱，获得一张 *超绝猛虎杀击乱斩 。 NL 结束你的回合 "
+    "DESCRIPTION": " 消耗 。对所有敌人造成 !D! 点伤害3次。每次 !M!% 概率增加6点伤害。消耗所有 Leiheng:虎标弹 ，对所有敌人施加相同层数的 Leiheng:燃烧 。使用后将 Leiheng:虎标弹 数量重置为 8，获得 2 层虚弱，获得一张 *超绝猛虎杀击乱斩 。 NL 结束你的回合 ",
+    "UPGRADE_DESCRIPTION": " 消耗 。对所有敌人造成 !D! 点伤害3次。每次 !M!% 概率增加6点伤害。消耗所有 Leiheng:虎标弹 ，对所有敌人施加相同层数的 Leiheng:燃烧 。使用后将 Leiheng:虎标弹 数量重置为 8，获得 2 层虚弱，获得一张 *超绝猛虎杀击乱斩 。 NL 结束你的回合 "
   },
-  "mymod:Reloading1": {
+  "Leiheng:Reloading1": {
     "NAME": "装填",
-    "DESCRIPTION": "获得 !M! 层 mymod:虎标弹 ",
-    "UPGRADE_DESCRIPTION": "获得 !M! 层 mymod:虎标弹 "
+    "DESCRIPTION": "获得 !M! 层 Leiheng:虎标弹 ",
+    "UPGRADE_DESCRIPTION": "获得 !M! 层 Leiheng:虎标弹 "
   },
-  "mymod:Defendx3": {
+  "Leiheng:Defendx3": {
     "NAME": "三重铁壁",
     "DESCRIPTION": "获得 !B! 点格挡，连续3次。",
     "UPGRADE_DESCRIPTION": "获得 !B! 点格挡，连续3次。"
   },
-  "mymod:Longtenghuyue":{
+  "Leiheng:Longtenghuyue":{
   "NAME": "龙腾虎跃",
-  "DESCRIPTION": "抽 !M! 张牌,消耗 1 层 mymod:虎标弹 ，重复一次",
-  "UPGRADE_DESCRIPTION": "抽 !M! 张牌,消耗 1 层 mymod:虎标弹 ，重复一次"
+  "DESCRIPTION": "抽 !M! 张牌,消耗 1 层 Leiheng:虎标弹 ，重复一次",
+  "UPGRADE_DESCRIPTION": "抽 !M! 张牌,消耗 1 层 Leiheng:虎标弹 ，重复一次"
   },
-  "mymod:BulletDraw": {
+  "Leiheng:BulletDraw": {
     "NAME": "换膛续击",
     "DESCRIPTION": "每当你消耗一颗子弹，抽 !M! 张牌。",
     "UPGRADE_DESCRIPTION": "每当你消耗一颗子弹，抽 !M! 张牌。"
   },
-  "mymod:ReloadStrike": {
+  "Leiheng:ReloadStrike": {
     "NAME": "天退星刀：装填",
-    "DESCRIPTION": "造成 !D! 点伤害，将 mymod:虎标弹 数量重置为 8，结束回合。 NL 消耗 ",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，将 mymod:虎标弹 数量重置为 8，结束回合。 NL 消耗 "
+    "DESCRIPTION": "造成 !D! 点伤害，将 Leiheng:虎标弹 数量重置为 8，结束回合。 NL 消耗 ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，将 Leiheng:虎标弹 数量重置为 8，结束回合。 NL 消耗 "
   },
-  "mymod:PreyCard": {
+  "Leiheng:PreyCard": {
     "NAME": "标记猎物",
-    "DESCRIPTION": "给予一个敌人 mymod:猎物 。",
-    "UPGRADE_DESCRIPTION": "给予一个敌人 mymod:猎物 。"
+    "DESCRIPTION": "给予一个敌人 Leiheng:猎物 。",
+    "UPGRADE_DESCRIPTION": "给予一个敌人 Leiheng:猎物 。"
   },
-  "mymod:Reloading": {
+  "Leiheng:Reloading": {
     "NAME": "快速装填",
-    "DESCRIPTION": "每回合开始时获得 !M! 层 mymod:虎标弹 。",
-    "UPGRADE_DESCRIPTION": "每回合开始时获得 !M! 层 mymod:虎标弹 。"
+    "DESCRIPTION": "每回合开始时获得 !M! 层 Leiheng:虎标弹 。",
+    "UPGRADE_DESCRIPTION": "每回合开始时获得 !M! 层 Leiheng:虎标弹 。"
   },
-  "mymod:Heart": {
+  "Leiheng:Heart": {
     "NAME": "心-天退星",
-    "DESCRIPTION": "获得 1 层 mymod:心-天退星 。",
-    "UPGRADE_DESCRIPTION": "获得 1 层 mymod:心-天退星 。"
+    "DESCRIPTION": "获得 1 层 Leiheng:心-天退星 。",
+    "UPGRADE_DESCRIPTION": "获得 1 层 Leiheng:心-天退星 。"
   },
-  "mymod:FanTheFlames": {
+  "Leiheng:FanTheFlames": {
     "NAME": "煽风点火",
-    "DESCRIPTION": "使所有敌人的 mymod:燃烧 层数翻倍。 NL 消耗 ",
-    "UPGRADE_DESCRIPTION": "使所有敌人的 mymod:燃烧 层数翻倍。"
+    "DESCRIPTION": "使所有敌人的 Leiheng:燃烧 层数翻倍。 NL 消耗 ",
+    "UPGRADE_DESCRIPTION": "使所有敌人的 Leiheng:燃烧 层数翻倍。"
   },
-  "mymod:BulletDefense": {
+  "Leiheng:BulletDefense": {
     "NAME": "弹幕防御",
     "DESCRIPTION": "获得 2 层弹幕防御。每消耗一颗子弹，获得与弹幕防御层数相等的格挡。",
     "UPGRADE_DESCRIPTION": "获得 2 层弹幕防御。每消耗一颗子弹，获得与弹幕防御层数相等的格挡。"
   },
-  "mymod:Ignite": {
+  "Leiheng:Ignite": {
     "NAME": "助燃",
     "DESCRIPTION": "造成 !D! 点伤害，每有2层燃烧额外造成 1 点伤害。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，每有2层燃烧额外造成 1 点伤害。"
   },
-  "mymod:Boosting": {
+  "Leiheng:Boosting": {
     "NAME": "提速",
     "DESCRIPTION": "抽 !M! 张牌，获得 !M! 点能量。 NL 消耗 ",
     "UPGRADE_DESCRIPTION": "抽 !M! 张牌，获得 !M! 点能量。 NL 消耗  "
   },
-  "mymod:BulletRecycle": {
+  "Leiheng:BulletRecycle": {
     "NAME": "子弹回收",
     "DESCRIPTION": "消耗最多 !M! 张牌，获得2点 [E] 。",
     "UPGRADE_DESCRIPTION": "消耗最多 !M! 张牌，获得2点 [E] 。"
   },
-  "mymod:ArmorPiercingShot": {
+  "Leiheng:ArmorPiercingShot": {
     "NAME": "破甲射击",
-    "DESCRIPTION": "造成 !D! 点伤害，消耗 1 颗 mymod:虎标弹 ，给予敌人 !M! 层虚弱和 !M! 层易伤。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，消耗 1 颗 mymod:虎标弹 ，给予敌人 !M! 层虚弱和 !M! 层易伤。"
+    "DESCRIPTION": "造成 !D! 点伤害，消耗 1 颗 Leiheng:虎标弹 ，给予敌人 !M! 层虚弱和 !M! 层易伤。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，消耗 1 颗 Leiheng:虎标弹 ，给予敌人 !M! 层虚弱和 !M! 层易伤。"
   },
-  "mymod:ShieldWall": {
+  "Leiheng:ShieldWall": {
     "NAME": "铁壁防线",
-    "DESCRIPTION": "获得 !B! 点格挡。消耗 1 颗 mymod:虎标弹 ，获得额外 !M! 点格挡。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡。消耗 1 颗 mymod:虎标弹 ，获得额外 !M! 点格挡。"
+    "DESCRIPTION": "获得 !B! 点格挡。消耗 1 颗 Leiheng:虎标弹 ，获得额外 !M! 点格挡。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡。消耗 1 颗 Leiheng:虎标弹 ，获得额外 !M! 点格挡。"
   },
-  "mymod:RapidFire": {
+  "Leiheng:RapidFire": {
     "NAME": "连续射击",
     "DESCRIPTION": "消耗最多 6 颗子弹，然后失去所有子弹。每当消耗 1 颗子弹，随机对一个敌人造成 !D! 点伤害并施加 !M! 层燃烧。",
     "UPGRADE_DESCRIPTION": "消耗最多 6 颗子弹，然后失去所有子弹。每当消耗 1 颗子弹，随机对一个敌人造成 !D! 点伤害并施加 !M! 层燃烧。"
   },
-  "mymod:BattleFrenzy": {
+  "Leiheng:BattleFrenzy": {
     "NAME": "临战凶煞",
     "DESCRIPTION": "获得 2 点力量，对所有敌人施加 !M! 层虚弱。",
     "UPGRADE_DESCRIPTION": "获得 3 点力量，对所有敌人施加 !M! 层虚弱。"
   },
-  "mymod:AfterimageDefense": {
+  "Leiheng:AfterimageDefense": {
     "NAME": "残像防御",
     "DESCRIPTION": " 消耗 。 虚无 NL 获得 !B! 点护甲。",
     "UPGRADE_DESCRIPTION": " 消耗 。 虚无 NL 获得 !B! 点护甲。"
   },
-  "mymod:SuperTigerStrike": {
+  "Leiheng:SuperTigerStrike": {
     "NAME": "超绝猛虎杀击乱斩",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害6次。每次 !M!% 概率增加6点伤害。消耗所有 mymod:虎标弹 ，对所有敌人施加相同层数的 mymod:燃烧 。使用后将 mymod:虎标弹 数量重置为 8，结束回合。",
-    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害6次。每次 !M!% 概率增加6点伤害。消耗所有 mymod:虎标弹 ，对所有敌人施加相同层数的 mymod:燃烧 。使用后将 mymod:虎标弹 数量重置为 8，结束回合。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害6次。每次 !M!% 概率增加6点伤害。消耗所有 Leiheng:虎标弹 ，对所有敌人施加相同层数的 Leiheng:燃烧 。使用后将 Leiheng:虎标弹 数量重置为 8，结束回合。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害6次。每次 !M!% 概率增加6点伤害。消耗所有 Leiheng:虎标弹 ，对所有敌人施加相同层数的 Leiheng:燃烧 。使用后将 Leiheng:虎标弹 数量重置为 8，结束回合。"
   }
 }
