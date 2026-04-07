@@ -47,8 +47,8 @@
   },
   "leiheng:BulletDraw": {
     "NAME": "Bullet Draw",
-    "DESCRIPTION": "Whenever you consume a bullet, draw !M! cards.",
-    "UPGRADE_DESCRIPTION": "Whenever you consume a bullet, draw !M! cards."
+    "DESCRIPTION": "Whenever you consume a leiheng:Tigermark, draw !M! cards.",
+    "UPGRADE_DESCRIPTION": "Whenever you consume a leiheng:Tigermark, draw !M! cards."
   },
   "leiheng:ReloadStrike": {
     "NAME": "Tiantui Star Blade: Reload",
