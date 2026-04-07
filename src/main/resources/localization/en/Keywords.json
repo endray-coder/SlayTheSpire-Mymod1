@@ -1,0 +1,18 @@
+[
+  {
+    "NAMES": ["tigermark", "Tigermark"],
+    "DESCRIPTION": "Have #yTigermark  to trigger additional effects. If 0 at the start of turn, gain #yOverheat"
+  },
+  {
+    "NAMES": ["burn", "Burn"],
+    "DESCRIPTION": "Take damage equal to #yBurn stacks at the end of turn"
+  },
+  {
+    "NAMES": ["prey", "Prey"],
+    "DESCRIPTION": "Lose 5 Strength. (Cannot stack)"
+  },
+  {
+    "NAMES": ["tiantuistar", "TiantuiStar,tiantui star"],
+    "DESCRIPTION": "Gain 5 Strength and 5 Dexterity (Cannot stack). For every 10 #yTigermark consumed in this battle, gain 1 Strength and 1 Dexterity at the start of turn."
+  }
+]

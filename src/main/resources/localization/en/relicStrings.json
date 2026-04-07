@@ -1,0 +1,16 @@
+{
+  "leiheng:diejia": {
+    "NAME": "Armor Up!",
+    "FLAVOR": "This person is lazy, wrote nothing",
+    "DESCRIPTIONS": [
+      "At the start of battle, gain Barricade buff"
+    ]
+  },
+  "leiheng:reload_relic": {
+    "NAME": "Heaven's Retreat Blade",
+    "FLAVOR": "This person is lazy, wrote nothing",
+    "DESCRIPTIONS": [
+      "At the start of battle, gain 12 Tigermark"
+    ]
+  }
+}

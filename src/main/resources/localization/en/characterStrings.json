@@ -1,0 +1,14 @@
+{
+  "leiheng:MyCharacter": {
+    "NAMES": ["Tiantui Star:Lei Heng"],
+    "TEXT": [
+      "欸↑嘿",
+      "die！"
+    ],
+    "DIALOGS": {
+      "ATTACK": ["进攻！", "吃我一击！"],
+      "DEFEND": ["防御！", "小心应对！"],
+      "LOW_HEALTH": ["哦没死！", "哦，布莱克斯！"]
+    }
+  }
+}

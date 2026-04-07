@@ -1,0 +1,128 @@
+{
+  "leiheng:Strike": {
+    "NAME": "Basic Strike",
+    "DESCRIPTION": "Deal !D! damage",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage"
+  },
+  "leiheng:shoot1": {
+    "NAME": "Double Shot",
+    "DESCRIPTION": "Attack the enemy 2 times, dealing !D! damage each. Consume 1 stack of leiheng:Tigermark , deal 2 additional damage and apply !M! stacks of leiheng:Burn .",
+    "UPGRADE_DESCRIPTION": "Attack the enemy 2 times, dealing !D! damage each. Consume 1 stack of leiheng:Tigermark , deal 3 additional damage and apply !M! stacks of leiheng:Burn ."
+  },
+  "leiheng:shoot2": {
+    "NAME": "Triple Shot",
+    "DESCRIPTION": "Attack the enemy 3 times, dealing !D! damage each. Consume 2 stacks of leiheng:Tigermark , apply !M! stacks of leiheng:Burn 3 times, deal 2 additional damage and apply 2 stacks of leiheng:Burn for each Tigermark consumed.",
+    "UPGRADE_DESCRIPTION": "Attack the enemy 3 times, dealing !D! damage each. Consume 2 stacks of leiheng:Tigermark , apply !M! stacks of leiheng:Burn 3 times, deal 4 additional damage and apply 2 stacks of leiheng:Burn for each Tigermark consumed."
+  },
+  "leiheng:Defend": {
+    "NAME": "Basic Defend",
+    "DESCRIPTION": "Gain !B! block.",
+    "UPGRADE_DESCRIPTION": "Gain !B! block."
+  },
+  "leiheng:HeavyStrike": {
+    "NAME": "Heavy Strike",
+    "DESCRIPTION": "Deal !D! damage to all enemies and give them -3 Strength. Apply !M! stacks of leiheng:Burn , consume up to 2 stacks of leiheng:Tigermark , deal 2 additional damage and apply 2 stacks of leiheng:Burn for each Tigermark consumed.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to all enemies and give them -3 Strength. Apply !M! stacks of leiheng:Burn , consume up to 2 stacks of leiheng:Tigermark , deal 4 additional damage and apply 4 stacks of leiheng:Burn for each Tigermark consumed."
+  }
+  ,
+  "leiheng:QuickStrike": {
+    "NAME": "Tanglecleaver",
+    "DESCRIPTION": " Exhaust . Deal !D! damage to all enemies 3 times. Each time has !M!% chance to increase damage by 6. Consume all leiheng:Tigermark , apply the same number of stacks of leiheng:Burn to all enemies. Reset leiheng:Tigermark to 8, gain 2 Weak, and obtain one *Savage *Tigerslayer's *Perfected *Flurry *of *Blades. NL End your turn ",
+    "UPGRADE_DESCRIPTION": " Exhaust . Deal !D! damage to all enemies 3 times. Each time has !M!% chance to increase damage by 6. Consume all leiheng:Tigermark , apply the same number of stacks of leiheng:Burn to all enemies. Reset leiheng:Tigermark to 8, gain 2 Weak, and obtain one *Savage *Tigerslayer's *Perfected *Flurry *of *Blades. NL End your turn "
+  },
+  "leiheng:Reloading1": {
+    "NAME": "Reload",
+    "DESCRIPTION": "Gain !M! stacks of leiheng:Tigermark ",
+    "UPGRADE_DESCRIPTION": "Gain !M! stacks of leiheng:Tigermark "
+  },
+  "leiheng:Defendx3": {
+    "NAME": "Defensive Stance",
+    "DESCRIPTION": "Gain !B! block, 3 times in a row.",
+    "UPGRADE_DESCRIPTION": "Gain !B! block, 3 times in a row."
+  },
+  "leiheng:Longtenghuyue": {
+    "NAME": "Dragon Tiger Leap",
+    "DESCRIPTION": "Draw !M! cards, consume 1 stack of leiheng:Tigermark , repeat once",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards, consume 1 stack of leiheng:Tigermark , repeat once"
+  },
+  "leiheng:BulletDraw": {
+    "NAME": "Bullet Draw",
+    "DESCRIPTION": "Whenever you consume a bullet, draw !M! cards.",
+    "UPGRADE_DESCRIPTION": "Whenever you consume a bullet, draw !M! cards."
+  },
+  "leiheng:ReloadStrike": {
+    "NAME": "Tiantui Star Blade: Reload",
+    "DESCRIPTION": "Deal !D! damage, reset leiheng:Tigermark to 8, end your turn. NL Exhaust ",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage, reset leiheng:Tigermark to 8, end your turn. NL Exhaust "
+  },
+  "leiheng:PreyCard": {
+    "NAME": "Mark Prey",
+    "DESCRIPTION": "Give an enemy leiheng:Prey .",
+    "UPGRADE_DESCRIPTION": "Give an enemy leiheng:Prey ."
+  },
+  "leiheng:Reloading": {
+    "NAME": "Quick Reload",
+    "DESCRIPTION": "At the start of each turn, gain !M! stacks of leiheng:Tigermark .",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, gain !M! stacks of leiheng:Tigermark ."
+  },
+  "leiheng:Heart": {
+    "NAME": "Tiantui Star",
+    "DESCRIPTION": "Gain 1 stack of leiheng:TiantuiStar .",
+    "UPGRADE_DESCRIPTION": "Gain 1 stack of leiheng:TiantuiStar ."
+  },
+  "leiheng:FanTheFlames": {
+    "NAME": "Fan the Flames",
+    "DESCRIPTION": "Double the stacks of leiheng:Burn on all enemies. NL Exhaust ",
+    "UPGRADE_DESCRIPTION": "Double the stacks of leiheng:Burn on all enemies."
+  },
+  "leiheng:BulletDefense": {
+    "NAME": "Bullet Defense",
+    "DESCRIPTION": "Gain 2 stacks of Bullet Barrage Defense. Whenever you consume a bullet, gain block equal to the number of Bullet Barrage Defense stacks.",
+    "UPGRADE_DESCRIPTION": "Gain 2 stacks of Bullet Barrage Defense. Whenever you consume a bullet, gain block equal to the number of Bullet Barrage Defense stacks."
+  },
+  "leiheng:Ignite": {
+    "NAME": "Ignite",
+    "DESCRIPTION": "Deal !D! damage, deal 1 additional damage for every 2 stacks of Burn.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage, deal 1 additional damage for every 2 stacks of Burn."
+  },
+  "leiheng:Boosting": {
+    "NAME": "Boost",
+    "DESCRIPTION": "Draw !M! cards, gain !M! [E] . NL Exhaust ",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards, gain !M! [E] . NL Exhaust  "
+  },
+  "leiheng:BulletRecycle": {
+    "NAME": "Bullet Recycle",
+    "DESCRIPTION": "Exhaust up to !M! cards, gain 2 [E] .",
+    "UPGRADE_DESCRIPTION": "Exhaust up to !M! cards, gain 2 [E] ."
+  },
+  "leiheng:ArmorPiercingShot": {
+    "NAME": "Armor Piercing Shot",
+    "DESCRIPTION": "Deal !D! damage, consume 1 leiheng:Tigermark , give the enemy !M! Weak and !M! Vulnerable.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage, consume 1 leiheng:Tigermark , give the enemy !M! Weak and !M! Vulnerable."
+  },
+  "leiheng:ShieldWall": {
+    "NAME": "Shield Wall",
+    "DESCRIPTION": "Gain !B! block. Consume 1 leiheng:Tigermark , gain additional !M! block.",
+    "UPGRADE_DESCRIPTION": "Gain !B! block. Consume 1 leiheng:Tigermark , gain additional !M! block."
+  },
+  "leiheng:RapidFire": {
+    "NAME": "Rapid Fire",
+    "DESCRIPTION": "Consume up to 6 Tigermark, then lose all Tigermark. Whenever you consume 1 Tigermark, randomly deal !D! damage to an enemy and apply !M! stacks of Burn.",
+    "UPGRADE_DESCRIPTION": "Consume up to 6 Tigermark, then lose all Tigermark. Whenever you consume 1 Tigermark, randomly deal !D! damage to an enemy and apply !M! stacks of Burn."
+  },
+  "leiheng:BattleFrenzy": {
+    "NAME": "Battle Frenzy",
+    "DESCRIPTION": "Gain 2 Strength, apply !M! Weak to all enemies.",
+    "UPGRADE_DESCRIPTION": "Gain 3 Strength, apply !M! Weak to all enemies."
+  },
+  "leiheng:AfterimageDefense": {
+    "NAME": "Afterimage Defense",
+    "DESCRIPTION": " Exhaust . Ethereal NL Gain !B! block.",
+    "UPGRADE_DESCRIPTION": " Exhaust . Ethereal NL Gain !B! block."
+  },
+  "leiheng:SuperTigerStrike": {
+    "NAME": "Savage Tigerslayer's Perfected Flurry of Blades",
+    "DESCRIPTION": "Deal !D! damage to all enemies 6 times. Each time has !M!% chance to increase damage by 6. Consume all leiheng:Tigermark , apply the same number of stacks of leiheng:Burn to all enemies. Reset leiheng:Tigermark to 8, end your turn.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to all enemies 6 times. Each time has !M!% chance to increase damage by 6. Consume all leiheng:Tigermark , apply the same number of stacks of leiheng:Burn to all enemies. Reset leiheng:Tigermark to 8, end your turn."
+  }
+}

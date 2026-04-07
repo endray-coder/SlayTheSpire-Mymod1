@@ -1,0 +1,48 @@
+{
+  "leiheng:bullet": {
+    "NAME": "Tigermark",
+    "DESCRIPTIONS": [
+      "Have ","Tigermark"
+    ]
+  },
+  "leiheng:burn": {
+    "NAME": "Burn",
+    "DESCRIPTIONS": [
+      "Take "," damage at the end of turn and reduce to 2/3 of original (rounded down)"
+    ]
+  },
+  "leiheng:overheat": {
+    "NAME": "Overheat",
+    "DESCRIPTIONS": [
+      "Gain +3 Dexterity and -3 Strength. Lose this effect if you have bullets at the start of turn"
+    ]
+  },
+  "leiheng:ReloadingPower": {
+    "NAME": "Tigermark Reload",
+    "DESCRIPTIONS": [
+      "At the start of each turn, gain #b",
+      " stacks of Tigermark.",
+      " stacks of Tigermark."
+    ]
+  },
+  "leiheng:PreyPower": {
+    "NAME": "Prey",
+    "DESCRIPTIONS": ["Lose 5 Strength."]
+  },
+  "leiheng:HeartPower": {
+    "NAME": "Tiantui Star",
+    "DESCRIPTIONS": ["Gain 5 Strength and 5 Dexterity (Cannot stack). At the start of turn, for every 10 #yTigermark consumed in this battle, gain an additional 1 Strength and 1 Dexterity."]
+  },
+  "leiheng:BulletDrawPower": {
+    "NAME": "Tigermark Draw",
+    "DESCRIPTIONS": [
+      "Whenever you consume a Tigermark, draw #b",
+      " cards.",
+      " cards."
+    ]
+  },
+  "leiheng:BulletDefensePower": {
+    "NAME": "Tigermark Barrage Defense",
+    "DESCRIPTIONS": ["Whenever you consume a Tigermark, gain #b" , " block."]
+  }
+}

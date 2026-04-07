@@ -6,6 +6,7 @@ import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import examplemod.character.MyCharacter;
@@ -70,8 +71,14 @@ public class leiheng implements EditCardsSubscriber, EditCharactersSubscriber, E
 
     @Override
     public void receiveEditStrings() {
-        String lang = "/zhs/";
+
+        String lang ;
         // 加载卡牌本地化文件
+        if (Settings.language == Settings.GameLanguage.ZHS) {
+            lang = "/zhs/";
+        } else {
+            lang = "/en/";
+        }
         BaseMod.loadCustomStringsFile(CardStrings.class, "localization"+lang+"cardStrings.json");
         // 加载角色本地化文件
         BaseMod.loadCustomStringsFile(CharacterStrings.class, "localization"+lang+"characterStrings.json");
@@ -88,10 +95,14 @@ public class leiheng implements EditCardsSubscriber, EditCharactersSubscriber, E
     @Override
     public void receiveEditKeywords() {
         Gson gson = new Gson();
-        String lang = "zhs";
+        String lang ;
+        if (Settings.language == Settings.GameLanguage.ZHS) {
+            lang = "/zhs/";
+        } else {
+            lang = "/en/";
+        }
 
-
-        String json = Gdx.files.internal("localization/" + lang + "/Keywords.json")
+        String json = Gdx.files.internal("localization" + lang + "Keywords.json")
                 .readString(String.valueOf(StandardCharsets.UTF_8));
         Keyword[] keywords = gson.fromJson(json, Keyword[].class);
         if (keywords != null) {
