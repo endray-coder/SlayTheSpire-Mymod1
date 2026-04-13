@@ -27,9 +27,9 @@ import java.util.ArrayList;
 // 继承CustomPlayer类
 public class MyCharacter extends CustomPlayer {
     // 火堆的人物立绘（行动前）
-    private static final String MY_CHARACTER_SHOULDER_1 = "img/char/shoulder1.png";
+    private static final String MY_CHARACTER_SHOULDER_1 = "img/char/test0.png";
     // 火堆的人物立绘（行动后）
-    private static final String MY_CHARACTER_SHOULDER_2 = "img/char/shoulder2.png";
+    private static final String MY_CHARACTER_SHOULDER_2 = "img/char/test0.png";
     // 人物死亡图像
     private static final String CORPSE_IMAGE = "img/char/corpse.png";
     // 战斗界面左下角能量图标的每个图层
