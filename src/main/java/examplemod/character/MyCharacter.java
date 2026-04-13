@@ -31,7 +31,7 @@ public class MyCharacter extends CustomPlayer {
     // 火堆的人物立绘（行动后）
     private static final String MY_CHARACTER_SHOULDER_2 = "img/char/test0.png";
     // 人物死亡图像
-    private static final String CORPSE_IMAGE = "img/char/corpse.png";
+    private static final String CORPSE_IMAGE = "img/char/corpse1.png";
     // 战斗界面左下角能量图标的每个图层
     private static final String[] ORB_TEXTURES = new String[]{
             "img/UI/orb/layer5.png",
