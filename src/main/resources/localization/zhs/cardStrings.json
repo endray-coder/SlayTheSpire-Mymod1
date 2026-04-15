@@ -124,5 +124,10 @@
     "NAME": "超绝猛虎杀击乱斩",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害6次。每次 !M!% 概率增加6点伤害。消耗所有 leiheng:虎标弹 ，对所有敌人施加相同层数的 leiheng:燃烧 。使用后将 leiheng:虎标弹 数量重置为 8，结束回合。",
     "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害6次。每次 !M!% 概率增加6点伤害。消耗所有 leiheng:虎标弹 ，对所有敌人施加相同层数的 leiheng:燃烧 。使用后将 leiheng:虎标弹 数量重置为 8，结束回合。"
+  },
+  "leiheng:class_etiquette": {
+    "NAME": "阶级礼仪",
+    "DESCRIPTION": "造成 !D! 点伤害。下回合获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。下回合获得 [E] 。"
   }
 }

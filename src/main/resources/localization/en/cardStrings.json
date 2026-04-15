@@ -124,5 +124,10 @@
     "NAME": "Savage Tigerslayer's Perfected Flurry of Blades",
     "DESCRIPTION": "Deal !D! damage to all enemies 6 times. Each time has !M!% chance to increase damage by 6. Consume all leiheng:Tigermark , apply the same number of stacks of leiheng:Burn to all enemies. Reset leiheng:Tigermark to 8, end your turn.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage to all enemies 6 times. Each time has !M!% chance to increase damage by 6. Consume all leiheng:Tigermark , apply the same number of stacks of leiheng:Burn to all enemies. Reset leiheng:Tigermark to 8, end your turn."
+  },
+  "leiheng:class_etiquette": {
+    "NAME": "Class Etiquette",
+    "DESCRIPTION": "Deal !D! damage. Gain 1 energy next turn.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Gain 1 energy next turn."
   }
 }
