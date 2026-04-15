@@ -14,7 +14,7 @@ public class Boosting extends CustomCard {
     public static final String ID = "leiheng:Boosting";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = cardStrings.NAME;
-    private static final String IMG_PATH = "img/cards/Strike.png";
+    private static final String IMG_PATH = "img/cards/Boosting.png";
     private static final int COST = 0;
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;

@@ -1,3 +1,6 @@
+# 教程连接
+https://github.com/GlitchedReme/SlayTheSpireModTutorials
+
 ！这是一个练手的mod，只是练手。不保证任何平衡性。
 目前还是半成品
 
