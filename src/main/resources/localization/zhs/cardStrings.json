@@ -129,5 +129,10 @@
     "NAME": "阶级礼仪",
     "DESCRIPTION": "造成 !D! 点伤害。下回合获得 [E] 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。下回合获得 [E] 。"
+  },
+  "leiheng:Shiwulianzuo": {
+    "NAME": "什伍连坐",
+    "DESCRIPTION": "造成 !D! 点伤害三次。抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害三次。抽 !M! 张牌。"
   }
 }

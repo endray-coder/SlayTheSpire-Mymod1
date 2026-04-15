@@ -129,5 +129,10 @@
     "NAME": "Class Etiquette",
     "DESCRIPTION": "Deal !D! damage. Gain 1 energy next turn.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. Gain 1 energy next turn."
+  },
+  "leiheng:Shiwulianzuo": {
+    "NAME": "Collective Punishment",
+    "DESCRIPTION": "Deal !D! damage three times. Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage three times. Draw !M! card."
   }
 }
