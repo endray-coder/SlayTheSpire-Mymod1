@@ -23,6 +23,11 @@
     "NAME": "重击",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害，并给予 -3 点力量。施加 !M! 层 leiheng:燃烧 ，消耗最多2层 leiheng:虎标弹 ，每消耗1层子弹造成额外 2 点伤害并施加 2 层 leiheng:燃烧 。",
     "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害，并给予 -3 点力量。施加 !M! 层 leiheng:燃烧 ，消耗最多2层 leiheng:虎标弹 ，每消耗1层子弹造成额外 4 点伤害并施加 4 层 leiheng:燃烧 。"
+  },
+  "leiheng:Quanhuanbaozou": {
+    "NAME": "拳环暴揍",
+    "DESCRIPTION": "目标失去 !M! 力量，获得 2 层 虚弱 。造成 !D! 点伤害 4 次。获得 !B! 点格挡 2 次。",
+    "UPGRADE_DESCRIPTION": "目标失去 !M! 力量，获得 2 层 虚弱 。造成 !D! 点伤害 4 次。获得 !B! 点格挡 2 次。"
   }
   ,
   "leiheng:QuickStrike": {

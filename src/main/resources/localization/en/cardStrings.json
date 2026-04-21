@@ -23,6 +23,11 @@
     "NAME": "Heavy Strike",
     "DESCRIPTION": "Deal !D! damage to all enemies and give them -3 Strength. Apply !M! stacks of leiheng:Burn , consume up to 2 stacks of leiheng:Tigermark , deal 2 additional damage and apply 2 stacks of leiheng:Burn for each Tigermark consumed.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage to all enemies and give them -3 Strength. Apply !M! stacks of leiheng:Burn , consume up to 2 stacks of leiheng:Tigermark , deal 4 additional damage and apply 4 stacks of leiheng:Burn for each Tigermark consumed."
+  },
+  "leiheng:Quanhuanbaozou": {
+    "NAME": "Knuckle Smash",
+    "DESCRIPTION": "Target loses !M! Strength, gains 2 Weak. Deal !D! damage 4 times. Gain !B! block 2 times.",
+    "UPGRADE_DESCRIPTION": "Target loses !M! Strength, gains 2 Weak. Deal !D! damage 4 times. Gain !B! block 2 times. NL (Upgrade: No text change)"
   }
   ,
   "leiheng:QuickStrike": {
