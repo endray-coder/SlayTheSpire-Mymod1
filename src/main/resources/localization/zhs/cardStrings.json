@@ -139,5 +139,20 @@
     "NAME": "什伍连坐",
     "DESCRIPTION": "造成 !D! 点伤害三次。抽 !M! 张牌。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害三次。抽 !M! 张牌。"
+  },
+  "leiheng:Zhuiwangzhubei": {
+    "NAME": "追亡逐北",
+    "DESCRIPTION": "造成 !D! 点伤害。若目标拥有 leiheng:猎物 ，伤害翻倍。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。若目标拥有 leiheng:猎物 ，伤害翻倍。"
+  },
+  "leiheng:Quandanfashe": {
+    "NAME": "全弹发射",
+    "DESCRIPTION": "造成 !D! 点伤害。消耗所有 leiheng:虎标弹 ，每消耗 1 层额外造成 !M! 点伤害。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。消耗所有 leiheng:虎标弹 ，每消耗 1 层额外造成 !M! 点伤害。"
+  },
+  "leiheng:Yiyidailao": {
+    "NAME": "以逸待劳",
+    "DESCRIPTION": "获得 !B! 点格挡。若你拥有 过热 ，额外获得 !M! 点格挡并抽 1 张牌。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡。若你拥有 过热 ，额外获得 !M! 点格挡并抽 1 张牌。"
   }
 }

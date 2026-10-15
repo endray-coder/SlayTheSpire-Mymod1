@@ -139,5 +139,20 @@
     "NAME": "Collective Punishment",
     "DESCRIPTION": "Deal !D! damage three times. Draw !M! card.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage three times. Draw !M! card."
+  },
+  "leiheng:Zhuiwangzhubei": {
+    "NAME": "Chase the Routed",
+    "DESCRIPTION": "Deal !D! damage. If the target has leiheng:Prey , double the damage.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. If the target has leiheng:Prey , double the damage."
+  },
+  "leiheng:Quandanfashe": {
+    "NAME": "Full Salvo",
+    "DESCRIPTION": "Deal !D! damage. Consume all leiheng:Tigermark , deal !M! additional damage for each stack consumed.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Consume all leiheng:Tigermark , deal !M! additional damage for each stack consumed."
+  },
+  "leiheng:Yiyidailao": {
+    "NAME": "Rest and Recuperate",
+    "DESCRIPTION": "Gain !B! Block. If you have Overheat, gain !M! additional Block and draw 1 card.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. If you have Overheat, gain !M! additional Block and draw 1 card."
   }
 }
