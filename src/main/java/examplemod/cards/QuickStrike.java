@@ -39,7 +39,6 @@ public class QuickStrike extends CustomCard {
         // 使用baseMagicNumber存储概率值（百分比形式）
         this.baseMagicNumber = this.magicNumber = (int)(rate * 100);
         this.exhaust = true; // 消耗
-        this.tags.add(CardTags.STARTER_STRIKE);
         this.tags.add(CardTags.STRIKE);
     }
 
